@@ -1,222 +1,126 @@
 <!doctype html>
-<html lang="fr">
+<html lang="{{ lang }}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PathoPredict Analytics — Inscription</title>
-    <!-- Typographie Inter & Icônes Bootstrap -->
+    <title>{{ labels.title }}</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
     <style>
-      /* Arrière-plan créatif sombre et immersif identique à l'app */
       body {
         font-family: "Inter", sans-serif;
         background: radial-gradient(
-          circle at 50% 30%,
+          circle at 20% 30%,
           #0f172a 0%,
           #090d16 100%
         );
-        background-attachment: fixed;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: #e2e8f0;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 40px 20px;
       }
-
-      /* Conteneur de style verre dépoli (Glassmorphism) */
-      .auth-card {
+      .signup-card {
         background: rgba(30, 41, 59, 0.45);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 28px;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        width: 100%;
-        max-width: 520px;
+        border-radius: 24px;
         padding: 40px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .auth-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 5px;
-        background: linear-gradient(90deg, #3b82f6, #06b6d4);
+        max-width: 480px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
       }
-
-      .logo-box {
-        background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-        width: 42px;
-        height: 42px;
+      /* Style des champs générés par Django */
+      input[type="text"],
+      input[type="password"] {
+        background-color: rgba(15, 23, 42, 0.5) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        color: #fff !important;
+        padding: 10px 15px;
         border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
-        margin: 0 auto 20px auto;
-      }
-
-      .brand-title {
-        font-weight: 700;
-        color: #ffffff;
-        letter-spacing: -0.04em;
-        font-size: 1.4rem;
-        text-align: center;
-        margin-bottom: 30px;
-      }
-      .brand-title span {
-        background: linear-gradient(to right, #3b82f6, #06b6d4);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      /* Personnalisation des formulaires Django injectés dynamiquement */
-      .auth-card form p {
-        margin-bottom: 20px;
-      }
-
-      .auth-card form label {
-        display: block;
-        font-weight: 600;
-        font-size: 0.9rem;
-        color: #f1f5f9;
-        margin-bottom: 8px;
-      }
-
-      /* Style des entrées de texte */
-      .auth-card form input[type="text"],
-      .auth-card form input[type="password"],
-      .auth-card form input[type="email"] {
-        display: block;
         width: 100%;
-        padding: 14px 20px;
-        font-size: 0.95rem;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 14px;
-        background-color: rgba(15, 23, 42, 0.5);
-        color: #ffffff;
-        transition: all 0.25s ease;
+        display: block;
+        margin-bottom: 15px;
       }
-
-      .auth-card form input:focus {
-        background-color: rgba(15, 23, 42, 0.8);
-        border-color: #3b82f6;
-        box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
-        outline: none;
-        color: #ffffff;
-      }
-
-      /* Personnalisation des listes d'aide et d'erreurs générées par Django */
       .helptext,
-      .errorlist {
+      .form-text {
         display: block;
+        font-size: 0.75rem;
+        color: #64748b;
+        margin-top: -10px;
+        margin-bottom: 15px;
+      }
+      ul.errorlist {
+        color: #f87171;
         font-size: 0.8rem;
+        padding-left: 20px;
+      }
+      label {
+        font-size: 0.85rem;
         color: #94a3b8;
-        margin-top: 6px;
-        padding-left: 0;
-        list-style: none;
+        margin-bottom: 5px;
+        display: block;
       }
-
-      .helptext ul {
-        padding-left: 15px;
-        list-style-type: disc;
-        margin-top: 5px;
-      }
-
-      .helptext li {
-        margin-bottom: 4px;
-        color: #94a3b8;
-      }
-
-      .errorlist li {
-        color: #ef4444;
-        font-weight: 500;
-        margin-bottom: 4px;
-      }
-
-      /* Bouton d'action principal */
-      .btn-auth {
+      .btn-submit {
         background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-        color: #ffffff;
-        font-weight: 600;
-        padding: 14px;
-        border-radius: 14px;
         border: none;
-        width: 100%;
-        transition: all 0.2s ease;
-        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-        margin-top: 15px;
-      }
-
-      .btn-auth:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 12px 25px rgba(59, 130, 246, 0.55);
-        color: #ffffff;
-      }
-
-      /* Liens de redirection de bas de page */
-      .auth-footer {
-        text-align: center;
-        margin-top: 25px;
-        font-size: 0.9rem;
-        color: #94a3b8;
-      }
-
-      .auth-footer a {
-        color: #38bdf8;
-        text-decoration: none;
+        padding: 14px;
+        border-radius: 12px;
         font-weight: 600;
-        transition: color 0.2s ease;
+        color: white;
+        width: 100%;
+        margin-top: 10px;
       }
-
-      .auth-footer a:hover {
-        color: #06b6d4;
+      .lang-btn {
+        opacity: 0.6;
+        font-size: 1.3rem;
+        text-decoration: none;
+      }
+      .lang-active {
+        opacity: 1;
+        border-bottom: 2px solid #3b82f6;
       }
     </style>
   </head>
   <body>
-    <div class="auth-card shadow-lg">
-      <!-- Logo -->
-      <div class="logo-box">
-        <i class="bi bi-diagram-3 text-white fs-4"></i>
+    <div class="signup-card">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="fw-bold text-white m-0">{{ labels.title }}</h3>
+        <div>
+          <a
+            href="?lang=fr"
+            class="lang-btn me-2 {% if lang == 'fr' %}lang-active{% endif %}"
+            >🇫🇷</a
+          >
+          <a
+            href="?lang=en"
+            class="lang-btn {% if lang == 'en' %}lang-active{% endif %}"
+            >🇺🇸</a
+          >
+        </div>
       </div>
 
-      <h2 class="brand-title">Join <span>PathoPredict</span></h2>
-
-      <!-- Formulaire Django -->
-      <form method="post">
+      <form method="POST">
         {% csrf_token %} {{ form.as_p }}
-
-        <button type="submit" class="btn btn-auth shadow-sm">
-          Create Account
+        <button type="submit" class="btn btn-submit mb-3">
+          {{ labels.btn }}
         </button>
       </form>
 
-      <!-- Redirection connexion -->
-      <div
-        class="auth-footer border-top pt-4"
-        style="border-color: rgba(255, 255, 255, 0.08) !important"
-      >
-        Already registered? <a href="{% url 'login' %}">Sign in</a>
+      <div class="text-center small mt-2">
+        <span class="text-muted">{{ labels.already }}</span>
+        <a
+          href="{% url 'login' %}"
+          class="text-info text-decoration-none fw-medium"
+          >{{ labels.login }}</a
+        >
       </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
