@@ -114,7 +114,7 @@ DESCRIPTIONS_MALADIES_FR = {
     "Common Cold": "Une infection virale hautement contagieuse des voies respiratoires supérieures, entraînant un écoulement nasal, des éternuements et des maux de gorge.",
     "Pneumonia": "Une infection aiguë d'un ou des deux poumons, généralement bactérienne ou virale, provoquant une toux persistante, de la fièvre et des difficultés respiratoires.",
     "Dimorphic hemmorhoids(piles)": "Veines gonflées et douloureuses dans l'anus et le rectum inférieur, pouvant provoquer des saignements mineurs ou des douleurs lors de la défécation.",
-    "Heart attack": "Une urgence médicale causée par l'interruption du flux sanguin vers le muscle grandiose cardiaque, provoquant une vive douleur thoracique irradiant vers le bras ou la mâchoire.",
+    "Heart attack": "Une urgence médicale causée par l'interruption du flux sanguin vers le muscle cardiaque, provoquant une vive douleur thoracique irradiant vers le bras ou la mâchoire.",
     "Varicose veins": "Veines dilatées et tortueuses, apparaissant le plus souvent sur les jambes, dues à une faiblesse des parois veineuses.",
     "Hypothyroidism": "Insuffisance d'activité de la glande thyroïde, ralentissant le métabolisme et entraînant fatigue, prise de poids et sensibilité au froid.",
     "Hyperthyroidism": "Hyperactivité de la glande thyroïde entraînant une production excessive d'hormones, accélérant le métabolisme (perte de poids, palpitations).",
@@ -133,7 +133,7 @@ DESCRIPTIONS_MALADIES_FR = {
     "Cervical spondylosis": "Usure liée à l'âge affectant les disques intervertébraux du cou, entraînant des douleurs persistantes et une raideur de la nuque.",
     "Paralysis (brain hemorrhage)": "Perte de la fonction motrice causée par un saignement dans le tissu cérébral, nécessitant une prise en charge médicale d'urgence.",
     "Jaundice": "Une coloration jaunâtre de la peau et des yeux causée par un excès de bilirubine dans le sang, reflétant un dysfonctionnement du foie.",
-    "Peptic ulcer diseae": "Lésions qui se développent sur la paroi interne de l'estomac ou de l'intestin grêle, provoquant des brûlures d'estomac après les repas.",
+    "Peptic ulcer diseae": "Lésions qui se développent sur la paroi interne de l'estomac ou de l'intestin grêle, provoquant des brûlures d'estomac après les armes.",
     "AIDS": "Stade avancé de l'infection par le VIH caractérisé par un système immunitaire gravement affaibli, rendant l'organisme vulnérable aux infections opportunistes.",
     "Gerd": "Reflux gastro-œsophagien, où l'acide gastrique remonte dans l'œsophage, provoquant des brûlures d'estomac et des irritations de la gorge.",
     "Chronic cholestasis": "Diminution ou arrêt prolongé de l'écoulement de la bile, provoquant des démangeaisons intenses, de la fatigue et parfois une jaunisse.",
@@ -214,7 +214,7 @@ RECOMMENDATIONS_MALADIES_FR = {
     "Urinary tract infection": ["Buvez d'importantes quantités d'eau.", "Consultez rapidement pour des antibiotiques.", "Évitez l'alcool, le café et le sucre.", "Urinez dès que l'envie se fait sentir."],
     "Psoriasis": ["Hydratez généreusement votre peau au quotidien.", "Évitez l'exposition prolongée au froid sec.", "Suivez scrupuleusement votre traitement prescrit.", "Gérez votre stress, puissant déclencheur."],
     "Impetigo": ["Consultez pour un traitement antibiotique local.", "Nettoyez à l'eau tiède pour retirer les croûtes.", "Couvrez les lésions d'une compresse stérile.", "Gardez des ongles courts et propres."],
-    "Gastroenteritis": ["Privilégiez la réhydratation par petites gorgées.", "Reprenez une alimentation légère (rice, banane).", "Évitez les produits laitiers et les graisses.", "Lavez-vous minutieusement les mains au savon."],
+    "Gastroenteritis": ["Privilégiez la réhydratation par petites gorgées.", "Reprenez une alimentation légère (riz, banane).", "Évitez les produits laitiers et les graisses.", "Lavez-vous minutieusement les mains au savon."],
     "Bronchial Asthma": ["Gardez en permanence votre inhalateur de secours.", "Limitez les facteurs déclencheurs (poussière, tabac).", "Prenez régulièrement votre traitement de fond.", "Appelez les urgences si la crise persiste."],
     "Hypertension": ["Adoptez une alimentation pauvre en sel.", "Pratiquez 30 minutes de marche par jour.", "Mesurez régulièrement votre tension artérielle.", "Prenez vos traitements tous les jours."],
     "Migraine": ["Allongez-vous dans une pièce sombre et silencieuse.", "Appliquez une compresse froide sur vos tempes.", "Buvez de l'eau et évitez les repas lourds.", "Prenez votre traitement spécifique dès le début."],
@@ -375,7 +375,7 @@ def index(request):
         'liste_symptomes': liste_symptomes_traduits,
         'resultat': resultat,
         'description': description,
-        'symptomes_coches':             symptomes_coches_affichage,
+        'symptomes_coches': symptomes_coches_affichage,
         'symptomes_valeurs_brutes': symptomes_coches,
         'top_predictions': top_predictions,
         'confiance_principale': confiance_principale,
@@ -395,22 +395,37 @@ def intro_view(request):
         
     if lang == 'en':
         labels = {
-            "welcome": "Welcome to PathoPredict Analytics",
-            "subtitle": "Advanced Diagnostic Platform Powered by Ensemble Learning Methods",
-            "btn_enter": "Access Platform Dashboard",
-            "footer": "National Institute of Statistics and Applied Economics — Biostatistics & Big Data Track"
+            "badge": "Decision Modeling Project",
+            "welcome": "Multiclass Statistical Inference Applied to Diagnosis",
+            "subtitle": "An advanced decision-making platform capable of estimating and classifying pathologies based on a vector of physiological indicators. Leverage an ensemble model trained on 4,920 biological profiles.",
+            "btn_login": "Sign In to Test",
+            "btn_signup": "Create An Account",
+            "f1_title": "Rigorous Classification",
+            "f1_desc": "Probabilistic estimation on an index of 41 distinct pathologies.",
+            "f2_title": "Ensemble Model",
+            "f2_desc": "Instantaneous inference via random forest decision trees.",
+            "f3_title": "Descriptive Synthesis",
+            "f3_desc": "Comprehensive analysis reports with confidence indicators.",
+            "footer": "National Institute of Statistics and Applied Economics — Biostatistics, Demography & Big Data Track"
         }
     else:
         labels = {
-            "welcome": "Bienvenue sur PathoPredict Analytics",
-            "subtitle": "Plateforme de Diagnostic Avancé Basée sur les Méthodes d'Apprentissage d'Ensemble",
-            "btn_enter": "Accéder au Tableau de Bord",
-            "footer": "Institut National de Statistique et d'Économie Appliquée — Filière Biostatistique & Big Data"
+            "badge": "Projet de Modélisation Décisionnelle",
+            "welcome": "Inférence Statistique Multiclasse Appliquée au Diagnostic",
+            "subtitle": "Une plateforme d'aide à la décision capable d'estimer et classifier des pathologies à partir d'un vecteur d'indicateurs physiologiques. Exploitez un modèle d'ensemble entraîné sur 4 920 profils biologiques.",
+            "btn_login": "Se connecter pour tester",
+            "btn_signup": "Créer un compte",
+            "f1_title": "Classification Rigoureuse",
+            "f1_desc": "Estimation probabiliste sur un index de 41 pathologies distinctes.",
+            "f2_title": "Modèle d'Ensemble",
+            "f2_desc": "Inférence instantanée via des arbres de décision de type Random Forest.",
+            "f3_title": "Synthèse Descriptive",
+            "f3_desc": "Rapports d'analyse complets avec indicateurs de confiance associés.",
+            "footer": "Institut National de Statistique et d'Économie Appliquée — Filière Biostatistique, Démographie & Big Data"
         }
         
     return render(request, 'prediction_app/intro.html', {'lang': lang, 'labels': labels})
 
-# VUE DE CONNEXION PERSONNALISÉE ET BILINGUE
 class CustomLoginView(LoginView):
     template_name = 'registration/login.html'
     

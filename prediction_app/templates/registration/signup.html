@@ -36,7 +36,6 @@
         max-width: 480px;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
       }
-      /* Style des champs générés par Django */
       input[type="text"],
       input[type="password"] {
         background-color: rgba(15, 23, 42, 0.5) !important;
@@ -78,9 +77,14 @@
         margin-top: 10px;
       }
       .lang-btn {
-        opacity: 0.6;
-        font-size: 1.3rem;
+        opacity: 0.4;
+        font-size: 1.4rem;
         text-decoration: none;
+        transition: opacity 0.2s;
+        display: inline-block;
+      }
+      .lang-btn:hover {
+        opacity: 1;
       }
       .lang-active {
         opacity: 1;
@@ -92,10 +96,10 @@
     <div class="signup-card">
       <div class="d-flex justify-content-between align-items-center mb-4">
         <h3 class="fw-bold text-white m-0">{{ labels.title }}</h3>
-        <div>
+        <div class="d-flex gap-2">
           <a
             href="?lang=fr"
-            class="lang-btn me-2 {% if lang == 'fr' %}lang-active{% endif %}"
+            class="lang-btn {% if lang == 'fr' %}lang-active{% endif %}"
             >🇫🇷</a
           >
           <a

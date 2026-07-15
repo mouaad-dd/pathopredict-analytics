@@ -1,10 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ lang }}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PathoPredict Analytics — Statistical Inference Platform</title>
-    <!-- Inter Typography & Bootstrap Icons -->
+    <title>PathoPredict Analytics — Welcome</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -21,7 +20,7 @@
       body {
         font-family: "Inter", sans-serif;
         background: radial-gradient(
-          circle at 50% 30%,
+          circle at 20% 30%,
           #0f172a 0%,
           #090d16 100%
         );
@@ -30,205 +29,221 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
       }
-
       .navbar-custom {
-        background-color: rgba(15, 23, 42, 0.4);
+        background-color: rgba(15, 23, 42, 0.6);
         backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
-
       .logo-box {
         background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-        width: 44px;
-        height: 44px;
-        border-radius: 12px;
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 0 20px rgba(59, 130, 246, 0.45);
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
       }
-
       .brand-title {
-        font-weight: 800;
+        font-weight: 700;
         color: #ffffff;
         letter-spacing: -0.04em;
-        font-size: 1.6rem;
+        font-size: 1.35rem;
       }
       .brand-title span {
         background: linear-gradient(to right, #3b82f6, #06b6d4);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-
       .intro-card {
         background: rgba(30, 41, 59, 0.35);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 28px;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        padding: 50px 40px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        padding: 50px;
+        text-align: center;
+        max-width: 850px;
+        margin: 40px auto;
       }
-
-      .btn-custom-primary {
+      .btn-login {
         background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
         color: #ffffff;
         font-weight: 600;
-        padding: 14px 32px;
-        border-radius: 14px;
+        padding: 16px 36px;
+        border-radius: 16px;
         border: none;
-        transition: all 0.25s ease;
+        transition: all 0.2s ease;
         box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        text-decoration: none;
+        display: inline-block;
       }
-      .btn-custom-primary:hover {
+      .btn-login:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+        box-shadow: 0 12px 25px rgba(59, 130, 246, 0.55);
         color: #ffffff;
       }
-
-      .btn-custom-secondary {
-        background-color: rgba(255, 255, 255, 0.05);
-        color: #ffffff;
-        font-weight: 600;
-        padding: 14px 32px;
-        border-radius: 14px;
+      .btn-signup {
+        background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.15);
-        transition: all 0.25s ease;
+        color: #e2e8f0;
+        font-weight: 600;
+        padding: 16px 36px;
+        border-radius: 16px;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        display: inline-block;
       }
-      .btn-custom-secondary:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-color: rgba(255, 255, 255, 0.25);
-        color: #ffffff;
+      .btn-signup:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+      .lang-btn {
+        opacity: 0.6;
+        transition:
+          opacity 0.2s,
+          transform 0.2s;
+        font-size: 1.4rem;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .lang-btn:hover {
+        opacity: 1;
+        transform: scale(1.15);
+      }
+      .lang-active {
+        opacity: 1;
+        border-bottom: 2px solid #3b82f6;
+        transform: scale(1.1);
       }
 
+      .feature-box {
+        text-align: left;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        padding: 20px;
+        height: 100%;
+      }
       .feature-icon {
-        font-size: 1.8rem;
-        background: linear-gradient(
-          135deg,
-          rgba(59, 130, 246, 0.1) 0%,
-          rgba(6, 182, 212, 0.1) 100%
-        );
-        border: 1px solid rgba(59, 130, 246, 0.15);
-        width: 50px;
-        height: 50px;
-        border-radius: 12px;
-        display: inline-flex;
+        width: 42px;
+        height: 42px;
+        background: rgba(59, 130, 246, 0.1);
+        border-radius: 10px;
+        display: flex;
         align-items: center;
         justify-content: center;
-        color: #38bdf8;
-      }
-
-      /* Custom class to keep description text highly visible */
-      .feature-desc {
-        color: #94a3b8 !important;
-        font-size: 0.85rem;
-        line-height: 1.5;
+        color: #3b82f6;
+        font-size: 1.25rem;
+        margin-bottom: 15px;
       }
     </style>
   </head>
   <body>
-    <!-- Header Navigation -->
-    <nav class="navbar navbar-custom fixed-top py-3">
-      <div class="container d-flex justify-content-center">
+    <!-- Navigation Navigation -->
+    <nav class="navbar navbar-custom py-3">
+      <div class="container d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center gap-3">
           <div class="logo-box">
-            <i class="bi bi-diagram-3 text-white fs-4"></i>
+            <i class="bi bi-diagram-3 text-white fs-5"></i>
           </div>
-          <span class="brand-title m-0"
-            >Patho<span>Predict</span> Analytics</span
+          <span class="brand-title">Patho<span>Predict Analytics</span></span>
+        </div>
+        <!-- Selector Flag Navigation -->
+        <div class="d-flex align-items-center gap-2">
+          <a
+            href="?lang=fr"
+            class="lang-btn {% if lang == 'fr' %}lang-active{% endif %}"
+            title="Français"
+            >🇫🇷</a
+          >
+          <a
+            href="?lang=en"
+            class="lang-btn {% if lang == 'en' %}lang-active{% endif %}"
+            title="English"
+            >🇺🇸</a
           >
         </div>
       </div>
     </nav>
 
-    <!-- Main Container -->
-    <div
-      class="container"
-      style="max-width: 850px; margin-top: 100px; margin-bottom: 50px"
-    >
-      <div class="intro-card text-center shadow-lg">
-        <div class="mb-4">
-          <span
-            class="badge bg-info bg-opacity-10 text-info px-3 py-2 rounded-pill fw-semibold fs-7"
-            style="border: 1px solid rgba(6, 182, 212, 0.2)"
-          >
-            🔬 Decision Modeling Project
-          </span>
-        </div>
-
+    <!-- Main Entry Module -->
+    <div class="container my-auto">
+      <div class="intro-card shadow-lg">
+        <span
+          class="badge bg-info bg-opacity-10 text-info px-3 py-2 rounded-pill fw-semibold mb-4"
+          style="border: 1px solid rgba(6, 182, 212, 0.2)"
+        >
+          <i class="bi bi-cpu-fill me-1"></i> {{ labels.badge }}
+        </span>
         <h1
-          class="fw-extrabold text-white mb-3"
-          style="font-size: 2.5rem; letter-spacing: -0.03em"
+          class="fw-extrabold text-white mb-4"
+          style="letter-spacing: -0.03em; font-size: 2.5rem"
         >
-          Multiclass Statistical Inference Applied to Diagnosis
+          {{ labels.welcome }}
         </h1>
-
         <p
-          class="text-light opacity-75 fs-5 mx-auto mb-5"
-          style="max-width: 680px; line-height: 1.6"
+          class="text-muted fs-5 mb-5 lh-base"
+          style="max-width: 750px; margin: 0 auto 40px auto"
         >
-          An advanced decision-making platform capable of estimating and
-          classifying pathologies based on a vector of physiological indicators.
-          Leverage an ensemble model trained on 4,920 biological profiles.
+          {{ labels.subtitle }}
         </p>
 
-        <!-- Call to Action Buttons -->
         <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
-          <a href="{% url 'login' %}" class="btn btn-custom-primary">
-            <i class="bi bi-box-arrow-in-right me-2"></i> Sign In to Test
+          <a href="{% url 'login' %}" class="btn-login shadow-sm">
+            <i class="bi bi-box-arrow-in-right me-2"></i> {{ labels.btn_login }}
           </a>
-          <a href="{% url 'signup' %}" class="btn btn-custom-secondary">
-            <i class="bi bi-person-plus me-2"></i> Create an Account
+          <a href="{% url 'signup' %}" class="btn-signup">
+            <i class="bi bi-person-plus me-2"></i> {{ labels.btn_signup }}
           </a>
         </div>
 
-        <!-- Key Features List -->
+        <!-- 3 Lower Description Blocks Fixed -->
         <div
-          class="row g-4 text-start mt-4 border-top pt-5"
+          class="row g-4 border-top pt-5 mt-2"
           style="border-color: rgba(255, 255, 255, 0.08) !important"
         >
           <div class="col-md-4">
-            <div class="d-flex gap-3 align-items-start">
-              <div class="feature-icon"><i class="bi bi-cpu"></i></div>
-              <div>
-                <h6 class="text-white fw-bold">Rigorous Classification</h6>
-                <p class="feature-desc mb-0">
-                  Probabilistic estimation on an index of 41 distinct
-                  pathologies.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="d-flex gap-3 align-items-start">
+            <div class="feature-box">
               <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
-              <div>
-                <h6 class="text-white fw-bold">Ensemble Model</h6>
-                <p class="feature-desc mb-0">
-                  Instantaneous inference via random forest decision trees.
-                </p>
-              </div>
+              <h6 class="fw-bold text-white mb-2">{{ labels.f1_title }}</h6>
+              <p class="small text-muted mb-0 lh-sm">{{ labels.f1_desc }}</p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="d-flex gap-3 align-items-start">
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="bi bi-diagram-3-fill"></i>
+              </div>
+              <h6 class="fw-bold text-white mb-2">{{ labels.f2_title }}</h6>
+              <p class="small text-muted mb-0 lh-sm">{{ labels.f2_desc }}</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-box">
               <div class="feature-icon">
                 <i class="bi bi-file-earmark-bar-graph"></i>
               </div>
-              <div>
-                <h6 class="text-white fw-bold">Descriptive Synthesis</h6>
-                <p class="feature-desc mb-0">
-                  Comprehensive analysis reports with confidence indicators.
-                </p>
-              </div>
+              <h6 class="fw-bold text-white mb-2">{{ labels.f3_title }}</h6>
+              <p class="small text-muted mb-0 lh-sm">{{ labels.f3_desc }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Footnote -->
+    <nav
+      class="text-center py-4 border-top"
+      style="
+        border-color: rgba(255, 255, 255, 0.05);
+        background-color: rgba(15, 23, 42, 0.2);
+      "
+    >
+      <p class="small text-secondary mb-0 opacity-70">{{ labels.footer }}</p>
+    </nav>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
