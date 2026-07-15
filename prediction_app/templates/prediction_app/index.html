@@ -101,7 +101,6 @@
         color: #94a3b8;
       }
 
-      /* FIX DESIGN OPTIMISÉ POUR LES LONGUES OPTION DE CHOIX */
       .symptom-tag {
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 16px;
@@ -499,7 +498,6 @@
           >
             {% for symp in liste_symptomes %}
             <div class="col symptom-col" style="display: none">
-              <!-- L'attribut title permet de voir l'intégralité du texte au survol de la souris -->
               <div
                 class="form-check symptom-tag d-flex align-items-center m-0"
                 title="{{ symp.nom_affichage }}"
@@ -541,7 +539,7 @@
       </div>
     </div>
 
-    <!-- SIDE PANEL (OFFCANVAS) -->
+    <!-- SIDE PANEL -->
     <div
       class="offcanvas offcanvas-end text-bg-dark"
       style="width: 500px"
@@ -581,60 +579,9 @@
             {{ labels.off_struct_desc }}
           </p>
         </div>
-
-        <div
-          class="table-responsive rounded border mb-4"
-          style="border-color: rgba(255, 255, 255, 0.12) !important"
-        >
-          <table
-            class="table table-sm table-striped table-dark text-center align-middle mb-0"
-            style="font-size: 0.8rem"
-          >
-            <thead>
-              <tr>
-                <th>{{ labels.off_table_target }}</th>
-                <th>{{ labels.off_table_itch }}</th>
-                <th>{{ labels.off_table_rash }}</th>
-                <th>{{ labels.off_table_chill }}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="fw-bold text-start text-info">
-                  {% if lang == 'en' %}Fungal infection{% else %}Infection
-                  fongique{% endif %}
-                </td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td class="fw-bold text-start text-info">
-                  {% if lang == 'en' %}Allergy{% else %}Allergie{% endif %}
-                </td>
-                <td>0</td>
-                <td>1</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td class="fw-bold text-start text-info">
-                  {% if lang == 'en' %}GERD{% else %}RGO{% endif %}
-                </td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h6 class="fw-bold text-white mb-2">
-          <i class="bi bi-check-circle-fill text-success me-2"></i>{{
-          labels.off_balance }}
-        </h6>
-        <p class="small text-secondary mb-0" style="color: #94a3b8 !important">
+        <div class="h-auto opacity-75 small border rounded p-3 text-muted">
           {{ labels.off_balance_desc }}
-        </p>
+        </div>
       </div>
     </div>
 
@@ -678,13 +625,6 @@
         cold: "cold",
         chills: "chills",
         vomiting: "vomiting",
-        rash: "rash",
-        itching: "itching",
-        skin: "skin",
-        yellow: "yellow",
-        abdominal: "abdominal",
-        stomach: "stomach",
-        headache: "headache",
       };
 
       function updateBadges() {
@@ -719,30 +659,23 @@
       function filterSymptomes() {
         let filter = searchInput.value.toLowerCase().trim();
         const rawSearch = filter;
-
         if (translations[filter]) {
           filter = translations[filter];
         }
         const isSearching = rawSearch !== "";
-
         gridTitle.textContent = isSearching
           ? "{{ labels.grid_match }}"
           : "{{ labels.grid_empty }}";
-
         cols.forEach((col) => {
           const label = col.querySelector(".form-check-label");
           const checkbox = col.querySelector("input");
           if (label) {
             const text = label.textContent.toLowerCase();
-            if (!isSearching) {
+            if (!isSearching) col.style.display = "";
+            else if (text.includes(filter) || text.includes(rawSearch))
               col.style.display = "";
-            } else if (text.includes(filter) || text.includes(rawSearch)) {
-              col.style.display = "";
-            } else if (checkbox.checked) {
-              col.style.display = "";
-            } else {
-              col.style.display = "none";
-            }
+            else if (checkbox.checked) col.style.display = "";
+            else col.style.display = "none";
           }
         });
       }
@@ -757,7 +690,6 @@
           }
         }
       });
-
       searchInput.addEventListener("input", filterSymptomes);
       document.querySelectorAll(".form-check-input").forEach((box) => {
         box.addEventListener("change", () => {
@@ -765,7 +697,6 @@
           filterSymptomes();
         });
       });
-
       updateBadges();
       filterSymptomes();
     </script>

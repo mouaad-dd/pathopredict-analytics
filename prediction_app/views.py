@@ -133,7 +133,7 @@ DESCRIPTIONS_MALADIES_FR = {
     "Cervical spondylosis": "Usure liée à l'âge affectant les disques intervertébraux du cou, entraînant des douleurs persistantes et une raideur de la nuque.",
     "Paralysis (brain hemorrhage)": "Perte de la fonction motrice causée par un saignement dans le tissu cérébral, nécessitant une prise en charge médicale d'urgence.",
     "Jaundice": "Une coloration jaunâtre de la peau et des yeux causée par un excès de bilirubine dans le sang, reflétant un dysfonctionnement du foie.",
-    "Peptic ulcer diseae": "Lésions qui se développent sur la paroi interne de l'estomac ou de l'intestin grêle, provoquant des brûlures d'estomac après les armes.",
+    "Peptic ulcer diseae": "Lésions qui se développent sur la paroi interne de l'estomac ou de l'intestin grêle, provoquant des brûlures d'estomac après les repas.",
     "AIDS": "Stade avancé de l'infection par le VIH caractérisé par un système immunitaire gravement affaibli, rendant l'organisme vulnérable aux infections opportunistes.",
     "Gerd": "Reflux gastro-œsophagien, où l'acide gastrique remonte dans l'œsophage, provoquant des brûlures d'estomac et des irritations de la gorge.",
     "Chronic cholestasis": "Diminution ou arrêt prolongé de l'écoulement de la bile, provoquant des démangeaisons intenses, de la fatigue et parfois une jaunisse.",
@@ -170,7 +170,7 @@ DESCRIPTIONS_MALADIES_EN = {
     "Urinary tract infection": "A bacterial infection affecting any part of the urinary system, resulting in painful, burning urination and frequent urges.",
     "Psoriasis": "A chronic autoimmune skin disease that speeds up the life cycle of skin cells, causing thick, red patches covered with silvery scales.",
     "Impetigo": "A highly contagious bacterial skin infection, common in children, characterized by red sores that break open and form honey-colored crusts.",
-    "Gastroenteritis": "Inflammation of the stomach and intestines due to infection, leading to diarrhea, vomiting, and abdominal cramps.",
+    "Gastroenteritis": "Inflammation of the stomach and intestines due to infection, leading to data loss, vomiting, and abdominal cramps.",
     "Bronchial Asthma": "A chronic disease causing inflammation and narrowing of the airways, resulting in wheezing, shortness of breath, and coughing.",
     "Hypertension": "Chronically elevated blood pressure in the arteries, increasing the heart's workload over time without immediate warning symptoms.",
     "Migraine": "An intense, throbbing headache, typically affecting one side of the head, often accompanied by nausea and extreme sensitivity to light.",
@@ -214,7 +214,7 @@ RECOMMENDATIONS_MALADIES_FR = {
     "Urinary tract infection": ["Buvez d'importantes quantités d'eau.", "Consultez rapidement pour des antibiotiques.", "Évitez l'alcool, le café et le sucre.", "Urinez dès que l'envie se fait sentir."],
     "Psoriasis": ["Hydratez généreusement votre peau au quotidien.", "Évitez l'exposition prolongée au froid sec.", "Suivez scrupuleusement votre traitement prescrit.", "Gérez votre stress, puissant déclencheur."],
     "Impetigo": ["Consultez pour un traitement antibiotique local.", "Nettoyez à l'eau tiède pour retirer les croûtes.", "Couvrez les lésions d'une compresse stérile.", "Gardez des ongles courts et propres."],
-    "Gastroenteritis": ["Privilégiez la réhydratation par petites gorgées.", "Reprenez une alimentation légère (riz, banane).", "Évitez les produits laitiers et les graisses.", "Lavez-vous minutieusement les mains au savon."],
+    "Gastroenteritis": ["Privilégiez la réhydratation par petites gorgées.", "Reprenez une alimentation légère (rice, banane).", "Évitez les produits laitiers et les graisses.", "Lavez-vous minutieusement les mains au savon."],
     "Bronchial Asthma": ["Gardez en permanence votre inhalateur de secours.", "Limitez les facteurs déclencheurs (poussière, tabac).", "Prenez régulièrement votre traitement de fond.", "Appelez les urgences si la crise persiste."],
     "Hypertension": ["Adoptez une alimentation pauvre en sel.", "Pratiquez 30 minutes de marche par jour.", "Mesurez régulièrement votre tension artérielle.", "Prenez vos traitements tous les jours."],
     "Migraine": ["Allongez-vous dans une pièce sombre et silencieuse.", "Appliquez une compresse froide sur vos tempes.", "Buvez de l'eau et évitez les repas lourds.", "Prenez votre traitement spécifique dès le début."],
@@ -259,7 +259,7 @@ RECOMMENDATIONS_MALADIES_EN = {
     "Psoriasis": ["Keep your skin well-moisturized.", "Avoid dry or cold weather triggers.", "Follow your prescribed topical treatments.", "Identify and manage stressors."],
     "Impetigo": ["Consult a doctor for prescription ointment.", "Gently wash sores with soap and warm water.", "Cover sores with a clean bandage.", "Keep your nails short and clean."],
     "Gastroenteritis": ["Focus on replacing lost fluids.", "Eat small, bland meals (rice, bananas).", "Avoid dairy, caffeine, and fatty foods.", "Maintain strict handwashing habits."],
-    "Bronchial Asthma": ["Keep your rescue inhaler with you at all times.", "Minimize exposure to asthma triggers.", "Follow your personalized action plan.", "Seek emergency care if breathing fails."],
+    "Bronchial Asthma": ["Keep your rescue inhaler with you at all times.", "Minimize exposure to asthma triggers.", "Follow your personalized action plan.", "Take long-term controller medications regularly."],
     "Hypertension": ["Maintain a low-sodium, heart-healthy diet.", "Engage in moderate physical activity.", "Monitor blood pressure levels at home.", "Take medications consistently."],
     "Migraine": ["Rest in a quiet, dark, and cool room.", "Apply a cold compress to your forehead.", "Hydrate with small sips of water.", "Take abortive medications as directed."],
     "Cervical spondylosis": ["Practice good posture while working.", "Perform regular gentle neck stretching.", "Apply a heating pad or ice pack.", "Use a supportive neck pillow."],
@@ -396,16 +396,12 @@ def intro_view(request):
     if lang == 'en':
         labels = {
             "badge": "Decision Modeling Project",
-            "welcome": "Multiclass Statistical Inference Applied to Diagnosis",
+            "welcome": "With-Vector Multiclass Statistical Inference Applied to Diagnosis",
             "subtitle": "An advanced decision-making platform capable of estimating and classifying pathologies based on a vector of physiological indicators. Leverage an ensemble model trained on 4,920 biological profiles.",
-            "btn_login": "Sign In to Test",
-            "btn_signup": "Create An Account",
-            "f1_title": "Rigorous Classification",
-            "f1_desc": "Probabilistic estimation on an index of 41 distinct pathologies.",
-            "f2_title": "Ensemble Model",
-            "f2_desc": "Instantaneous inference via random forest decision trees.",
-            "f3_title": "Descriptive Synthesis",
-            "f3_desc": "Comprehensive analysis reports with confidence indicators.",
+            "btn_login": "Sign In to Test", "btn_signup": "Create An Account",
+            "f1_title": "Rigorous Classification", "f1_desc": "Probabilistic estimation on an index of 41 distinct pathologies.",
+            "f2_title": "Ensemble Model", "f2_desc": "Instantaneous inference via random forest decision trees.",
+            "f3_title": "Descriptive Synthesis", "f3_desc": "Comprehensive analysis reports with confidence indicators.",
             "footer": "National Institute of Statistics and Applied Economics — Biostatistics, Demography & Big Data Track"
         }
     else:
@@ -413,14 +409,10 @@ def intro_view(request):
             "badge": "Projet de Modélisation Décisionnelle",
             "welcome": "Inférence Statistique Multiclasse Appliquée au Diagnostic",
             "subtitle": "Une plateforme d'aide à la décision capable d'estimer et classifier des pathologies à partir d'un vecteur d'indicateurs physiologiques. Exploitez un modèle d'ensemble entraîné sur 4 920 profils biologiques.",
-            "btn_login": "Se connecter pour tester",
-            "btn_signup": "Créer un compte",
-            "f1_title": "Classification Rigoureuse",
-            "f1_desc": "Estimation probabiliste sur un index de 41 pathologies distinctes.",
-            "f2_title": "Modèle d'Ensemble",
-            "f2_desc": "Inférence instantanée via des arbres de décision de type Random Forest.",
-            "f3_title": "Synthèse Descriptive",
-            "f3_desc": "Rapports d'analyse complets avec indicateurs de confiance associés.",
+            "btn_login": "Se connecter pour tester", "btn_signup": "Créer un compte",
+            "f1_title": "Classification Rigoureuse", "f1_desc": "Estimation probabiliste sur un index de 41 pathologies distinctes.",
+            "f2_title": "Modèle d'Ensemble", "f2_desc": "Inférence instantanée via des arbres de décision de type Random Forest.",
+            "f3_title": "Synthèse Descriptive", "f3_desc": "Rapports d'analyse complets avec indicateurs de confiance associés.",
             "footer": "Institut National de Statistique et d'Économie Appliquée — Filière Biostatistique, Démographie & Big Data"
         }
         
@@ -433,42 +425,15 @@ class CustomLoginView(LoginView):
         context = super().get_context_data(**kwargs)
         lang = self.request.GET.get('lang', self.request.session.get('lang', 'fr'))
         self.request.session['lang'] = lang
-        
-        if lang == 'en':
-            context['labels'] = {
-                "title": "Login to PathoPredict", "user": "Username", "pass": "Password",
-                "btn": "Sign In", "no_account": "Don't have an account yet?", "register": "Sign up"
-            }
-        else:
-            context['labels'] = {
-                "title": "Connexion à PathoPredict", "user": "Nom d'utilisateur", "pass": "Mot de passe",
-                "btn": "Se connecter", "no_account": "Pas encore de compte ?", "register": "S'inscrire"
-            }
         context['lang'] = lang
         return context
 
 def signup_view(request):
     lang = request.GET.get('lang', request.session.get('lang', 'fr'))
     request.session['lang'] = lang
-    
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect('index')
-    else:
-        form = UserCreationForm()
-        
-    if lang == 'en':
-        labels = {
-            "title": "Join PathoPredict", "btn": "Create Account",
-            "already": "Already registered?", "login": "Sign In"
-        }
-    else:
-        labels = {
-            "title": "Rejoindre PathoPredict", "btn": "Créer mon compte",
-            "already": "Déjà inscrit ?", "login": "Se connecter"
-        }
-        
-    return render(request, 'registration/signup.html', {'form': form, 'lang': lang, 'labels': labels})
+    form = UserCreationForm(request.POST or None)
+    if request.method == 'POST' and form.is_valid():
+        user = form.save()
+        login(request, user)
+        return redirect('index')
+    return render(request, 'registration/signup.html', {'form': form, 'lang': lang})
