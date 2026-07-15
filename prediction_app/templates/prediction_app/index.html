@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="{{ lang }}">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ labels.title }}</title>
+    <title>PathoPredict Analytics</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -157,20 +157,6 @@
         font-weight: 700;
         color: #10b981;
       }
-      .btn-analyse {
-        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-        color: #ffffff;
-        font-weight: 600;
-        padding: 18px 44px;
-        border-radius: 16px;
-        border: none;
-        transition: all 0.2s ease;
-        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-      }
-      .btn-analyse:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 12px 25px rgba(59, 130, 246, 0.55);
-      }
       .progress-premium {
         height: 10px;
         background-color: rgba(255, 255, 255, 0.08);
@@ -220,8 +206,6 @@
         border-bottom: 2px solid #3b82f6;
         transform: scale(1.1);
       }
-
-      /* CORRECTION FORCEE DU SPECTRUM SOMBRE DE L'APP */
       .text-muted,
       .text-secondary,
       .text-light-50 {
@@ -244,16 +228,10 @@
 
         <div class="d-flex align-items-center gap-3">
           <div class="d-flex align-items-center gap-2 me-2">
-            <a
-              href="?lang=fr"
-              class="lang-btn {% if lang == 'fr' %}lang-active{% endif %}"
-              title="Français"
+            <a href="?lang=fr" class="lang-btn" id="flagFr" title="Français"
               >🇫🇷</a
             >
-            <a
-              href="?lang=en"
-              class="lang-btn {% if lang == 'en' %}lang-active{% endif %}"
-              title="English"
+            <a href="?lang=en" class="lang-btn" id="flagEn" title="English"
               >🇺🇸</a
             >
           </div>
@@ -264,8 +242,8 @@
             data-bs-toggle="offcanvas"
             data-bs-target="#datasetMetadata"
           >
-            <i class="bi bi-folder-symlink-fill text-info me-1"></i> {% if lang
-            == 'en' %}Training Dataset{% else %}Base d'Entraînement{% endif %}
+            <i class="bi bi-folder-symlink-fill text-info me-1"></i>
+            <span id="btnDatasetText">Base d'Entraînement</span>
           </button>
           <form action="{% url 'logout' %}" method="post" class="m-0">
             {% csrf_token %}
@@ -273,8 +251,9 @@
               type="submit"
               class="btn btn-outline-danger btn-sm px-4 rounded-pill fw-medium"
               style="border-color: rgba(239, 68, 68, 0.3)"
+              id="btnLogoutText"
             >
-              {{ labels.btn_logout }}
+              Se déconnecter
             </button>
           </form>
         </div>
@@ -290,8 +269,8 @@
               <i class="bi bi-folder-fill"></i>
             </div>
             <div class="fw-bold text-white fs-4">41</div>
-            <div class="small" style="color: #94a3b8">
-              {{ labels.kpi_patho }}
+            <div class="small" style="color: #94a3b8" id="kpiPatho">
+              Pathologies Classifiées
             </div>
           </div>
         </div>
@@ -301,8 +280,8 @@
               <i class="bi bi-sliders"></i>
             </div>
             <div class="fw-bold text-white fs-4">132</div>
-            <div class="small" style="color: #94a3b8">
-              {{ labels.kpi_vars }}
+            <div class="small" style="color: #94a3b8" id="kpiVars">
+              Variables Explicatives
             </div>
           </div>
         </div>
@@ -312,15 +291,21 @@
               <i class="bi bi-matrix-3x3"></i>
             </div>
             <div class="fw-bold text-white fs-4">4 920</div>
-            <div class="small" style="color: #94a3b8">{{ labels.kpi_obs }}</div>
+            <div class="small" style="color: #94a3b8" id="kpiObs">
+              Observations Échantillonnées
+            </div>
           </div>
         </div>
         <div class="col-6 col-md-3">
           <div class="metric-card shadow-sm">
-            <div class="fs-3 mb-2" style="height: 36px"></div>
-            <div class="fw-bold text-white fs-5">{{ labels.kpi_algo }}</div>
-            <div class="small" style="color: #94a3b8">
-              {{ labels.kpi_engine }}
+            <div class="text-info fs-3 mb-2">
+              <i class="bi bi-cpu-fill"></i>
+            </div>
+            <div class="fw-bold text-white fs-5" id="kpiAlgo">
+              Algorithme d'Ensemble
+            </div>
+            <div class="small" style="color: #94a3b8" id="kpiEngine">
+              Moteur d'Inférence
             </div>
           </div>
         </div>
@@ -336,10 +321,12 @@
             class="badge bg-info bg-opacity-10 text-info px-3 py-2 rounded-pill fw-semibold fs-7"
             style="border: 1px solid rgba(6, 182, 212, 0.2)"
           >
-            <i class="bi bi-bar-chart-fill me-1"></i> {{ labels.inf_title }}
+            <i class="bi bi-bar-chart-fill me-1"></i>
+            <span id="infTitle">Résultat de l'Inférence Algorithmique</span>
           </span>
           <span style="color: #94a3b8"
-            >{{ labels.inf_session }}: #{{ request.user.id }}</span
+            ><span id="infSession">Session Utilisateur</span>: #{{
+            request.user.id }}</span
           >
         </div>
 
@@ -348,8 +335,9 @@
             <p
               class="text-uppercase tracking-wider fw-bold small"
               style="color: #94a3b8 !important"
+              id="infClass"
             >
-              {{ labels.inf_class }}
+              Classe Principale Estimée :
             </p>
             <h2 class="fw-bold mb-4 text-white" style="letter-spacing: -0.02em">
               {{ resultat }}
@@ -359,7 +347,8 @@
             >
               <i class="bi bi-graph-up-arrow fs-5 text-info"></i>
               <span class="fw-bold"
-                >{{ labels.inf_conf }} : {{ confiance_principale }}%</span
+                ><span id="infConf">Indice de confiance du modèle</span> : {{
+                confiance_principale }}%</span
               >
             </div>
             <div
@@ -369,8 +358,8 @@
                 border: 1px solid rgba(255, 255, 255, 0.08);
               "
             >
-              <h6 class="fw-bold text-white mb-2 fs-6">
-                {{ labels.inf_synth }}
+              <h6 class="fw-bold text-white mb-2 fs-6" id="infSynth">
+                📌 Synthèse de la description clinique
               </h6>
               <p class="mb-0 lh-base fs-6" style="color: #cbd5e1 !important">
                 {{ description }}
@@ -385,8 +374,9 @@
             <p
               class="text-uppercase tracking-wider fw-bold small"
               style="color: #94a3b8 !important"
+              id="infRisk"
             >
-              {{ labels.inf_risk }}
+              Spectre de distribution des risques (Top 3) :
             </p>
             {% for pred in top_predictions %}
             <div class="mb-4">
@@ -413,8 +403,9 @@
               <p
                 class="text-uppercase tracking-wider fw-bold small"
                 style="color: #94a3b8 !important"
+                id="infRec"
               >
-                {{ labels.inf_rec }}
+                🔬 Conseils & actions de première urgence :
               </p>
               <ul class="list-unstyled d-flex flex-column gap-2 m-0">
                 {% for step in recommendations %}
@@ -435,8 +426,11 @@
             border-color: rgba(255, 255, 255, 0.08) !important;
             color: #94a3b8 !important;
           "
+          id="infWarning"
         >
-          {{ labels.inf_warning }}
+          ⚠️ Cette prédiction automatisée est basée sur des algorithmes de
+          corrélation statistique. Elle ne se substitue en aucun cas à une
+          évaluation médicale clinique.
         </p>
       </div>
       {% endif %}
@@ -445,10 +439,13 @@
       <div class="card card-premium p-4 p-md-5 mb-5">
         <div class="mb-4">
           <h3 class="fw-bold text-white tracking-tight mb-2">
-            <i class="bi bi-shield-plus me-2 text-primary"></i>{{
-            labels.matrix_title }}
+            <i class="bi bi-shield-plus me-2 text-primary"></i
+            ><span id="matrixTitle">Matrice de Configuration Clinique</span>
           </h3>
-          <p style="color: #94a3b8 !important">{{ labels.matrix_desc }}</p>
+          <p style="color: #94a3b8 !important" id="matrixDesc">
+            Sélectionnez et combinez les paramètres observés pour soumettre le
+            vecteur de caractéristiques au modèle prédictif.
+          </p>
         </div>
 
         {% if error_message %}
@@ -472,7 +469,7 @@
               type="text"
               id="searchSymptom"
               class="form-control search-medical shadow-sm"
-              placeholder="{{ labels.search_placeholder }}"
+              placeholder="🔍 Filtrer les symptômes cliniques..."
             />
           </div>
 
@@ -480,8 +477,9 @@
             <div
               class="small fw-semibold mb-2"
               style="color: #94a3b8 !important"
+              id="activeParams"
             >
-              {{ labels.active_params }}
+              Paramètres actifs pour l'analyse statistique :
             </div>
             <div class="d-flex flex-wrap gap-2" id="badgeZone"></div>
           </div>
@@ -495,7 +493,7 @@
               style="color: #94a3b8"
               id="gridTitle"
             >
-              {{ labels.grid_empty }}
+              Index des Paramètres du Modèle
             </h6>
           </div>
 
@@ -538,8 +536,12 @@
             class="d-flex justify-content-end mt-5 pt-4 border-top"
             style="border-color: rgba(255, 255, 255, 0.08) !important"
           >
-            <button type="submit" class="btn btn-analyse shadow-sm">
-              {{ labels.btn_submit }}
+            <button
+              type="submit"
+              class="btn btn-analyse shadow-sm"
+              id="btnSubmitText"
+            >
+              Exécuter l'Analyse Statistique
             </button>
           </div>
         </form>
@@ -558,8 +560,8 @@
         style="border-color: rgba(255, 255, 255, 0.08)"
       >
         <h5 class="offcanvas-title fw-bold text-white">
-          <i class="bi bi-database-fill text-info me-2"></i>{{ labels.off_title
-          }}
+          <i class="bi bi-database-fill text-info me-2"></i
+          ><span id="offTitle">Matrice de la Source de Données</span>
         </h5>
         <button
           type="button"
@@ -576,15 +578,24 @@
           "
         >
           <h6 class="fw-bold text-white mb-2 fs-6">
-            <i class="bi bi-info-circle text-info me-2"></i>{{ labels.off_struct
-            }}
+            <i class="bi bi-info-circle text-info me-2"></i
+            ><span id="offStruct">Structure des Variables</span>
           </h6>
-          <p class="small" style="color: #94a3b8 !important">
-            {{ labels.off_struct_desc }}
+          <p class="small" style="color: #94a3b8 !important" id="offStructDesc">
+            Chaque colonne représente un symptôme clinique unique binarisé dans
+            le jeu de données : 1 indique la présence du symptôme, et 0
+            représente son absence.
           </p>
         </div>
-        <div class="h-auto small border rounded p-3" style="color: #cbd5e1">
-          {{ labels.off_balance_desc }}
+        <div
+          class="h-auto small border rounded p-3"
+          style="color: #cbd5e1"
+          id="offBalanceDesc"
+        >
+          Le classifieur est entraîné sur une base de données équilibrée de 4
+          920 enregistrements avec 132 symptômes distincts. Les classes
+          possèdent une distribution uniforme exacte, assurant une stabilité
+          mathématique optimale pour les estimateurs de type arbre de décision.
         </div>
       </div>
     </div>
@@ -596,6 +607,59 @@
       const badgeZone = document.getElementById("badgeZone");
       const selectedContainer = document.getElementById("selectedContainer");
       const gridTitle = document.getElementById("gridTitle");
+
+      // Gestion dynamique des traductions par injection JS pour immuniser le code
+      const urlParams = new URLSearchParams(window.location.search);
+      const isEn = urlParams.get("lang") === "en";
+
+      if (isEn) {
+        document.getElementById("flagEn").classList.add("lang-active");
+        document.getElementById("btnDatasetText").innerText =
+          "Training Dataset";
+        document.getElementById("btnLogoutText").innerText = "Sign Out";
+        document.getElementById("kpiPatho").innerText =
+          "Classified Pathologies";
+        document.getElementById("kpiVars").innerText = "Explanatory Variables";
+        document.getElementById("kpiObs").innerText = "Sampled Observations";
+        document.getElementById("kpiAlgo").innerText = "Ensemble Algorithm";
+        document.getElementById("kpiEngine").innerText = "Inference Engine";
+        document.getElementById("matrixTitle").innerText =
+          "Clinical Configuration Matrix";
+        document.getElementById("matrixDesc").innerText =
+          "Select and combine observed parameters to submit the feature vector to the predictive model.";
+        document.getElementById("searchSymptom").placeholder =
+          "🔍 Filter clinical symptoms (e.g., pain, fever, cough)...";
+        document.getElementById("activeParams").innerText =
+          "Active parameters for statistical analysis:";
+        document.getElementById("btnSubmitText").innerText =
+          "Execute Statistical Analysis";
+        document.getElementById("offTitle").innerText = "Source Dataset Matrix";
+        document.getElementById("offStruct").innerText = "Variable Structure";
+        document.getElementById("offStructDesc").innerText =
+          "Each column represents a unique clinical symptom binarized in the dataset: 1 indicates symptom presence, and 0 represents its absence.";
+        document.getElementById("offBalanceDesc").innerText =
+          "The classifier is trained on a balanced database of 4,920 records with 132 distinct symptoms. Classes have an exact uniform distribution, securing maximum mathematical stability for the decision tree estimators.";
+
+        if (document.getElementById("infTitle")) {
+          document.getElementById("infTitle").innerText =
+            "Algorithmic Inference Result";
+          document.getElementById("infSession").innerText = "User Session";
+          document.getElementById("infClass").innerText =
+            "Estimated Primary Class :";
+          document.getElementById("infConf").innerText =
+            "Model Confidence Score";
+          document.getElementById("infSynth").innerText =
+            "📌 Clinical Description Synthesis";
+          document.getElementById("infRisk").innerText =
+            "Distribution Risk Spectrum (Top 3) :";
+          document.getElementById("infRec").innerText =
+            "🔬 Recommended Steps for Recovery :";
+          document.getElementById("infWarning").innerText =
+            "⚠️ This automated prediction is based on statistical correlation algorithms. It is not a substitute for clinical medical evaluation.";
+        }
+      } else {
+        document.getElementById("flagFr").classList.add("lang-active");
+      }
 
       const translations = {
         douleur: "douleur",
@@ -667,9 +731,17 @@
           filter = translations[filter];
         }
         const isSearching = rawSearch !== "";
-        gridTitle.textContent = isSearching
-          ? "{{ labels.grid_match }}"
-          : "{{ labels.grid_empty }}";
+
+        if (isEn) {
+          gridTitle.textContent = isSearching
+            ? "Search Results Matches"
+            : "Model Parameters Index";
+        } else {
+          gridTitle.textContent = isSearching
+            ? "Résultats de la Recherche"
+            : "Index des Paramètres du Modèle";
+        }
+
         cols.forEach((col) => {
           const label = col.querySelector(".form-check-label");
           const checkbox = col.querySelector("input");
