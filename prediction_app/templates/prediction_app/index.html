@@ -157,6 +157,20 @@
         font-weight: 700;
         color: #10b981;
       }
+      .btn-analyse {
+        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        color: #ffffff !important;
+        font-weight: 600;
+        padding: 18px 44px;
+        border-radius: 16px;
+        border: none;
+        transition: all 0.2s ease;
+        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+      }
+      .btn-analyse:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 25px rgba(59, 130, 246, 0.55);
+      }
       .progress-premium {
         height: 10px;
         background-color: rgba(255, 255, 255, 0.08);
@@ -608,7 +622,6 @@
       const selectedContainer = document.getElementById("selectedContainer");
       const gridTitle = document.getElementById("gridTitle");
 
-      // Gestion dynamique des traductions par injection JS pour immuniser le code
       const urlParams = new URLSearchParams(window.location.search);
       const isEn = urlParams.get("lang") === "en";
 
