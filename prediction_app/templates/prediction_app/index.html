@@ -264,8 +264,8 @@
             data-bs-toggle="offcanvas"
             data-bs-target="#datasetMetadata"
           >
-            <i class="bi bi-folder-symlink-fill text-info me-1"></i> {{
-            labels.btn_dataset }}
+            <i class="bi bi-folder-symlink-fill text-info me-1"></i> {% if lang
+            == 'en' %}Training Dataset{% else %}Base d'Entraînement{% endif %}
           </button>
           <form action="{% url 'logout' %}" method="post" class="m-0">
             {% csrf_token %}
