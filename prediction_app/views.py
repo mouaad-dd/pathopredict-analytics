@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login
+from django.contrib import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 import joblib
@@ -358,37 +358,46 @@ def index(request):
     top_predictions = []
     confiance_principale = 0  # Default value for GET requests
     recommendations = []      # Default empty list
+    error_message = None      # Add an error tracker variable
 
     if request.method == 'POST':
         symptomes_coches = request.POST.getlist('symptomes')
-        vecteur_input = np.zeros(len(liste_symptomes))
         
-        for symp in symptomes_coches:
-            if symp in liste_symptomes:
-                index_symp = liste_symptomes.index(symp)
-                vecteur_input[index_symp] = 1
+        # -------------------------------------------------------------
+        # FIX: Check if no symptoms are selected
+        # -------------------------------------------------------------
+        if not symptomes_coches:
+            error_message = "Please select at least one clinical symptom before executing the statistical analysis."
+        else:
+            # Continue standard ML prediction logic if at least one checkbox is checked
+            vecteur_input = np.zeros(len(liste_symptomes))
+            
+            for symp in symptomes_coches:
+                if symp in liste_symptomes:
+                    index_symp = liste_symptomes.index(symp)
+                    vecteur_input[index_symp] = 1
 
-        df_input = pd.DataFrame([vecteur_input], columns=liste_symptomes)
+            df_input = pd.DataFrame([vecteur_input], columns=liste_symptomes)
 
-        probabilites = modele.predict_proba(df_input)[0]
-        classes = modele.classes_
-        
-        predictions_associees = sorted(zip(classes, probabilites), key=lambda x: x[1], reverse=True)
-        
-        raw_resultat = predictions_associees[0][0]
-        resultat = NOM_FRANCAIS_MALADIES.get(raw_resultat, raw_resultat)
-        description = DESCRIPTIONS_MALADIES.get(raw_resultat, "No description available.")
-        confiance_principale = int(predictions_associees[0][1] * 100)
-        
-        # Pull clinical recommendations based on the predicted target
-        recommendations = RECOMMENDATIONS_MALADIES.get(raw_resultat, ["Consult a medical professional for personalized advice."])
-        
-        for mal, prob in predictions_associees[:3]:
-            if prob > 0:
-                top_predictions.append({
-                    'nom': NOM_FRANCAIS_MALADIES.get(mal, mal),
-                    'score': int(prob * 100)
-                })
+            probabilites = modele.predict_proba(df_input)[0]
+            classes = modele.classes_
+            
+            predictions_associees = sorted(zip(classes, probabilites), key=lambda x: x[1], reverse=True)
+            
+            raw_resultat = predictions_associees[0][0]
+            resultat = NOM_FRANCAIS_MALADIES.get(raw_resultat, raw_resultat)
+            description = DESCRIPTIONS_MALADIES.get(raw_resultat, "No description available.")
+            confiance_principale = int(predictions_associees[0][1] * 100)
+            
+            # Pull clinical recommendations based on the predicted target
+            recommendations = RECOMMENDATIONS_MALADIES.get(raw_resultat, ["Consult a medical professional for personalized advice."])
+            
+            for mal, prob in predictions_associees[:3]:
+                if prob > 0:
+                    top_predictions.append({
+                        'nom': NOM_FRANCAIS_MALADIES.get(mal, mal),
+                        'score': int(prob * 100)
+                    })
 
     context = {
         'liste_symptomes': liste_symptomes,
@@ -397,7 +406,8 @@ def index(request):
         'symptomes_coches': symptomes_coches,
         'top_predictions': top_predictions,
         'confiance_principale': confiance_principale,
-        'recommendations': recommendations,  # Add context variable
+        'recommendations': recommendations,
+        'error_message': error_message,  # Pass the validation error to template context
     }
     return render(request, 'prediction_app/index.html', context)
 
