@@ -57,135 +57,48 @@ NOM_FRANCAIS_MALADIES = {
 }
 
 TRADUCTION_SYMPTOMES = {
-    "itching": "Démangeaisons",
-    "skin_rash": "Éruption cutanée",
-    "continuous_sneezing": "Éternuements continus",
-    "shivering": "Frissons",
-    "chills": "Courbatures / Frissons froids",
-    "joint_pain": "Douleurs articulaires",
-    "stomach_pain": "Maux d'estomac",
-    "acidity": "Acidité gastrique",
-    "ulcers_on_tongue": "Aphtes sur la langue",
-    "muscle_wasting": "Fonte musculaire",
-    "vomiting": "Vomissements",
-    "burning_micturition": "Brûlure mictionnelle (en urinant)",
-    "spotting_urination": "Traces de sang dans les urines",
-    "fatigue": "Fatigue",
-    "weight_gain": "Prise de poids",
-    "anxiety": "Anxiété",
-    "cold_hands_and_feets": "Mains et pieds froids",
-    "mood_swings": "Changements d'humeur",
-    "weight_loss": "Perte de poids",
-    "restlessness": "Agitation",
-    "lethargy": "Léthargie",
-    "patches_in_throat": "Plaques dans la gorge",
-    "irregular_sugar_level": "Taux de sucre irrégulier",
-    "cough": "Toux",
-    "high_fever": "Fièvre élevée",
-    "sunken_eyes": "Yeux creux",
-    "breathlessness": "Essoufflement",
-    "sweating": "Transpiration excessive",
-    "dehydration": "Déshydratation",
-    "indigestion": "Indigestions",
-    "headache": "Maux de tête",
-    "yellowish_skin": "Peau jaunâtre",
-    "dark_urine": "Urines foncées",
-    "nausea": "Nausées",
-    "loss_of_appetite": "Perte d'appétit",
-    "pain_behind_the_eyes": "Douleur derrière les yeux",
-    "back_pain": "Mal de dos",
-    "constipation": "Constipation",
-    "abdominal_pain": "Douleur abdominale",
-    "diarrhoea": "Diarrhée",
-    "mild_fever": "Fièvre légère",
-    "yellow_urine": "Urines jaunes",
-    "yellowing_of_eyes": "Jaunissement des yeux",
-    "acute_liver_failure": "Insuffisance hépatique aiguë",
-    "fluid_overload": "Surcharge de fluides",
-    "swelling_of_stomach": "Gonflement de l'estomac",
-    "swelled_lymph_nodes": "Ganglions lymphatiques gonflés",
-    "malaise": "Malaise général",
-    "blurred_and_distorted_vision": "Vision floue et déformée",
-    "phlegm": "Crachats / Flegme",
-    "throat_irritation": "Irritation de la gorge",
-    "redness_of_eyes": "Rougeur des yeux",
-    "sinus_pressure": "Pression sinusale",
-    "runny_nose": "Écoulement nasal",
-    "congestion": "Congestion nasale",
-    "chest_pain": "Douleur thoracique",
-    "weakness_in_limbs": "Faiblesse des membres",
-    "fast_heart_rate": "Rythme cardiaque rapide",
-    "pain_during_bowel_movements": "Douleur lors de la défécation",
-    "pain_in_anal_region": "Douleur dans la région anale",
-    "bloody_stool": "Selles sanglantes",
-    "irritation_in_anus": "Irritation de l'anus",
-    "neck_pain": "Douleur au cou",
-    "dizziness": "Sensations de vertige",
-    "cramps": "Crampes",
-    "bruising": "Ecchymoses / Bleus",
-    "obesity": "Obésité",
-    "swollen_legs": "Jambes enflées",
-    "swollen_blood_vessels": "Vaisseaux sanguins gonflés",
-    "puffy_face_and_eyes": "Visage et yeux bouffis",
-    "enlarged_thyroid": "Gorge / Thyroïde gonflée",
-    "brittle_nails": "Ongles cassants",
-    "swollen_extremeties": "Extrémités gonflées",
-    "excessive_hunger": "Faim excessive",
-    "extra_marital_contacts": "Rapports sexuels non protégés",
-    "drying_and_tingling_lips": "Lèvres sèches et picotements",
-    "slurred_speech": "Troubles de la parole",
-    "knee_pain": "Douleur au genou",
-    "hip_joint_pain": "Douleur à la hanche",
-    "muscle_weakness": "Faiblesse musculaire",
-    "stiff_neck": "Raideur de la nuque",
-    "swelling_joints": "Gonflement des articulations",
-    "movement_stiffness": "Rigidité des mouvements",
-    "spinning_movements": "Sensations de rotation",
-    "loss_of_balance": "Perte d'équilibre",
-    "unsteadiness": "Instabilité physique",
-    "weakness_of_one_body_side": "Faiblesse d'un côté du corps",
-    "loss_of_smell": "Perte d'odorat",
-    "bladder_discomfort": "Inconfort vésical",
-    "foul_smell_of_urine": "Urine malodorante",
-    "continuous_feel_of_urine": "Envie constante d'uriner",
-    "passage_of_gases": "Passage de gaz",
-    "internal_itching": "Démangeaisons internes",
-    "toxic_look_(typhos)": "Faciès toxique",
-    "depression": "Dépression",
-    "irritability": "Irritabilité",
-    "muscle_pain": "Douleurs musculaires",
-    "altered_sensorium": "Altération de la conscience",
-    "red_spots_over_body": "Taches rouges sur le corps",
-    "belly_pain": "Maux de ventre",
-    "abnormal_menstruation": "Règles anormales",
-    "dischromic_patches": "Plaques décolorées",
-    "watering_from_eyes": "Yeux larmoyants",
-    "increased_appetite": "Augmentation de l'appétit",
-    "polyuria": "Miction excessive (Polyurie)",
-    "family_history": "Antécédents familiaux",
-    "mucoid_sputum": "Crachats muqueux",
-    "rusty_sputum": "Crachats rouillés",
-    "lack_of_concentration": "Manque de concentration",
-    "visual_disturbances": "Troubles visuels",
-    "receiving_blood_transfusion": "Historique de transfusion sanguine",
-    "receiving_unsterile_injections": "Injections non stériles",
-    "coma": "Coma",
-    "stomach_bleeding": "Saignement de l'estomac",
-    "distention_of_abdomen": "Distension de l'abdomen",
-    "history_of_alcohol_consumption": "Antécédents de consommation d'alcool",
-    "blood_in_sputum": "Sang dans les crachats",
-    "prominent_veins_on_calf": "Veines saillantes sur le mollet",
-    "palpitations": "Palpitations",
-    "painful_walking": "Marche douloureuse",
-    "pus_filled_pimples": "Boutons de pus",
-    "blackheads": "Points noirs",
-    "scurring": "Cicatrices d'acné",
-    "skin_peeling": "Desquamation de la peau",
-    "silver_like_dusting": "Pellicules argentées (psoriasis)",
-    "small_dents_in_nails": "Petits creux sur les ongles",
-    "inflammatory_nails": "Inflammation des ongles",
-    "blister": "Ampoules / Cloches",
-    "red_sore_around_nose": "Plaies rouges autour du nez",
+    "itching": "Démangeaisons", "skin_rash": "Éruption cutanée", "continuous_sneezing": "Éternuements continus",
+    "shivering": "Frissons", "chills": "Courbatures / Frissons froids", "joint_pain": "Douleurs articulaires",
+    "stomach_pain": "Maux d'estomac", "acidity": "Acidité gastrique", "ulcers_on_tongue": "Aphtes sur la langue",
+    "muscle_wasting": "Fonte musculaire", "vomiting": "Vomissements", "burning_micturition": "Brûlure mictionnelle (en urinant)",
+    "spotting_urination": "Traces de sang dans les urines", "fatigue": "Fatigue", "weight_gain": "Prise de poids",
+    "anxiety": "Anxiété", "cold_hands_and_feets": "Mains et pieds froids", "mood_swings": "Changements d'humeur",
+    "weight_loss": "Perte de poids", "restlessness": "Agitation", "lethargy": "Léthargie", "patches_in_throat": "Plaques dans la gorge",
+    "irregular_sugar_level": "Taux de sucre irrégulier", "cough": "Toux", "high_fever": "Fièvre élevée",
+    "sunken_eyes": "Yeux creux", "breathlessness": "Essoufflement", "sweating": "Transpiration excessive",
+    "dehydration": "Déshydratation", "indigestion": "Indigestions", "headache": "Maux de tête", "yellowish_skin": "Peau jaunâtre",
+    "dark_urine": "Urines foncées", "nausea": "Nausées", "loss_of_appetite": "Perte d'appétit", "pain_behind_the_eyes": "Douleur derrière les yeux",
+    "back_pain": "Mal de dos", "constipation": "Constipation", "abdominal_pain": "Douleur abdominale", "diarrhoea": "Diarrhée",
+    "mild_fever": "Fièvre légère", "yellow_urine": "Urines jaunes", "yellowing_of_eyes": "Jaunissement des yeux",
+    "acute_liver_failure": "Insuffisance hépatique aiguë", "fluid_overload": "Surcharge de fluides", "swelling_of_stomach": "Gonflement de l'estomac",
+    "swelled_lymph_nodes": "Ganglions lymphatiques gonflés", "malaise": "Malaise général", "blurred_and_distorted_vision": "Vision floue et déformée",
+    "phlegm": "Crachats / Flegme", "throat_irritation": "Irritation de la gorge", "redness_of_eyes": "Rougeur des yeux",
+    "sinus_pressure": "Pression sinusale", "runny_nose": "Écoulement nasal", "congestion": "Congestion nasale",
+    "chest_pain": "Douleur thoracique", "weakness_in_limbs": "Faiblesse des membres", "fast_heart_rate": "Rythme cardiaque rapide",
+    "pain_during_bowel_movements": "Douleur lors de la défécation", "pain_in_anal_region": "Douleur dans la région anale",
+    "bloody_stool": "Selles sanglantes", "irritation_in_anus": "Irritation de l'anus", "neck_pain": "Douleur au cou",
+    "dizziness": "Sensations de vertige", "cramps": "Crampes", "bruising": "Ecchymoses / Bleus", "obesity": "Obésité",
+    "swollen_legs": "Jambes enflées", "swollen_blood_vessels": "Vaisseaux sanguins gonflés", "puffy_face_and_eyes": "Visage et yeux bouffis",
+    "enlarged_thyroid": "Gorge / Thyroïde gonflée", "brittle_nails": "Ongles cassants", "swollen_extremeties": "Extrémités gonflées",
+    "excessive_hunger": "Faim excessive", "extra_marital_contacts": "Rapports sexuels non protégés", "drying_and_tingling_lips": "Lèvres sèches et picotements",
+    "slurred_speech": "Troubles de la parole", "knee_pain": "Douleur au genou", "hip_joint_pain": "Douleur à la hanche",
+    "muscle_weakness": "Faiblesse musculaire", "stiff_neck": "Raideur de la nuque", "swelling_joints": "Gonflement des articulations",
+    "movement_stiffness": "Rigidité des mouvements", "spinning_movements": "Sensations de rotation", "loss_of_balance": "Perte d'équilibre",
+    "unsteadiness": "Instabilité physique", "weakness_of_one_body_side": "Faiblesse d'un côté du corps", "loss_of_smell": "Perte d'odorat",
+    "bladder_discomfort": "Inconfort vésical", "foul_smell_of_urine": "Urine malodorante", "continuous_feel_of_urine": "Envie constante d'uriner",
+    "passage_of_gases": "Passage de gaz", "internal_itching": "Démangeaisons internes", "toxic_look_(typhos)": "Faciès toxique",
+    "depression": "Dépression", "irritability": "Irritabilité", "muscle_pain": "Douleurs musculaires", "altered_sensorium": "Altération de la conscience",
+    "red_spots_over_body": "Taches rouges sur le corps", "belly_pain": "Maux de ventre", "abnormal_menstruation": "Règles anormales",
+    "dischromic_patches": "Plaques décolorées", "watering_from_eyes": "Yeux larmoyants", "increased_appetite": "Augmentation de l'appétit",
+    "polyuria": "Miction excessive (Polyurie)", "family_history": "Antécédents familiaux", "mucoid_sputum": "Crachats muqueux",
+    "rusty_sputum": "Crachats rouillés", "lack_of_concentration": "Manque de concentration", "visual_disturbances": "Troubles visuels",
+    "receiving_blood_transfusion": "Historique de transfusion sanguine", "receiving_unsterile_injections": "Injections non stériles",
+    "coma": "Coma", "stomach_bleeding": "Saignement de l'estomac", "distention_of_abdomen": "Distension de l'abdomen",
+    "history_of_alcohol_consumption": "Antécédents de consommation d'alcool", "blood_in_sputum": "Sang dans les crachats",
+    "prominent_veins_on_calf": "Veines saillantes sur le mollet", "palpitations": "Palpitations", "painful_walking": "Marche douloureuse",
+    "pus_filled_pimples": "Boutons de pus", "blackheads": "Points noirs", "scurring": "Cicatrices d'acné", "skin_peeling": "Desquamation de la peau",
+    "silver_like_dusting": "Pellicules argentées (psoriasis)", "small_dents_in_nails": "Petits creux sur les ongles",
+    "inflammatory_nails": "Inflammation des ongles", "blister": "Ampoules / Cloches", "red_sore_around_nose": "Plaies rouges autour du nez",
     "yellow_crust_ooze": "Suintement de croûtes jaunes"
 }
 
@@ -227,7 +140,7 @@ DESCRIPTIONS_MALADIES_FR = {
     "Hepatitis A": "Une maladie hépatique virale aiguë transmise par de l'eau ou des aliments contaminés, entraînant fatigue, nausées et perte d'appétit.",
     "Hepatitis B": "Infection hépatique virale transmise par le sang ou les fluides corporels, pouvant entraîner des lésions hépatiques chroniques.",
     "Hepatitis C": "Infection virale du foie transmise par le sang, évoluant fréquemment vers une inflammation chronique silencieuse.",
-    "Hepatitis D": "Maladie hépatique grave survenant uniquement chez les personnes déjà infectées par l'hépatite B, accélérant les complications.",
+    "Hepatitis D": "Maladie hépatique grave survenant uniquement chez les personnes déjà infected par l'hépatite B, accélérant les complications.",
     "Hepatitis E": "Infection hépatique virale principalement transmise par de l'eau de boisson contaminée, généralement bénigne mais dangereuse pour les femmes enceintes.",
     "Alcoholic hepatitis": "Inflammation aiguë ou chronique du foie causée par une consommation excessive et prolongée d'alcool.",
     "Tuberculosis": "Une infection bactérienne hautement contagieuse attaquant principalement les poumons, caractérisée par une toux persistante et des sueurs nocturnes."
@@ -257,7 +170,7 @@ DESCRIPTIONS_MALADIES_EN = {
     "Psoriasis": "A chronic autoimmune skin disease that speeds up the life cycle of skin cells, causing thick, red patches covered with silvery scales.",
     "Impetigo": "A highly contagious bacterial skin infection, common in children, characterized by red sores that break open and form honey-colored crusts.",
     "Gastroenteritis": "Inflammation of the stomach and intestines due to infection, leading to diarrhea, vomiting, and abdominal cramps.",
-    "Bronchial Asthma": "A chronic disease causing inflammation and narrowing of the airways, resulting in wheezing, shortness of breath, and coughing.",
+    "Bronchial Asthma": "A chronic disease causing inflammation and narrowing of the airways, resulting in whezing, shortness of breath, and coughing.",
     "Hypertension": "Chronically elevated blood pressure in the arteries, increasing the heart's workload over time without immediate warning symptoms.",
     "Migraine": "An intense, throbbing headache, typically affecting one side of the head, often accompanied by nausea and extreme sensitivity to light.",
     "Cervical spondylosis": "Age-related wear and tear affecting the spinal discs in the neck, leading to persistent neck pain and stiffness.",
@@ -274,514 +187,102 @@ DESCRIPTIONS_MALADIES_EN = {
     "Hepatitis D": "A serious liver disease occurring only in people who are already infected with Hepatitis B, leading to accelerated liver complications.",
     "Hepatitis E": "A viral liver infection mainly transmitted through contaminated drinking water, usually self-limiting but dangerous to vulnerable profiles.",
     "Alcoholic hepatitis": "Acute or chronic liver inflammation caused by heavy, long-term toxic consumption of alcohol.",
+    "Dark urine": "A highly contagious bacterial infection primarily attacking the lungs, characterized by persistent coughing, chest pain, and night sweats.",
     "Tuberculosis": "A highly contagious bacterial infection primarily attacking the lungs, characterized by persistent coughing, chest pain, and night sweats."
 }
 
 RECOMMENDATIONS_MALADIES_FR = {
-    "Drug Reaction": [
-        "Arrêtez immédiatement de prendre le médicament suspecté.",
-        "Consultez d'urgence un médecin ou rendez-vous dans un service d'évaluation médicale.",
-        "Prenez des antihistaminiques si conseillé par un médecin pour apaiser les démangeaisons.",
-        "Surveillez les signes graves comme des difficultés respiratoires ou un gonflement (appelez les urgences)."
-    ],
-    "Malaria": [
-        "Consultez immédiatement un médecin pour réaliser un test de diagnostic rapide (frottis sanguin).",
-        "Commencez sans délai le traitement antipaludique prescrit afin d'éviter toute complication grave.",
-        "Reposez-vous et buvez beaucoup d'eau pour rester hydraté.",
-        "Utilisez du paracétamol pour contrôler la fièvre selon les directives médicales."
-    ],
-    "Allergy": [
-        "Identifiez et évitez l'exposition à l'allergène déclencheur.",
-        "Utilisez des antihistaminiques en vente libre ou des sprays nasaux pour gérer les symptômes.",
-        "Gardez un auto-injecteur d'épinéphrine (EpiPen) à portée de main si vous avez des antécédents d'anaphylaxie grave.",
-        "Consultez un allergologue si les symptômes persistent ou s'aggravent."
-    ],
-    "Diabetes": [
-        "Surveillez régulièrement votre glycémie.",
-        "Respectez scrupuleusement votre traitement prescrit par votre médecin (insuline ou antidiabétiques oraux).",
-        "Maintenez une alimentation structurée à faible indice glycémique et pratiquez une activité physique.",
-        "Ayez toujours sur vous des glucides à action rapide (comme du jus ou des morceaux de sucre) pour traiter une hypoglycémie."
-    ],
-    "Dengue": [
-        "Reposez-vous autant que possible et assurez-vous d'avoir une excellente hydratation.",
-        "Prenez du paracétamol contre la fièvre et la douleur ; évitez l'aspirine ou l'ibuprofène qui augmentent les risques d'hémorragie.",
-        "Protégez-vous des piqûres de moustiques pour éviter la propagation du virus.",
-        "Surveillez attentivement l'apparition de signes d'alerte graves (vomissements persistants, saignements)."
-    ],
-    "Typhoid": [
-        "Consultez immédiatement un médecin afin d'obtenir une prescription d'antibiothérapie adaptée.",
-        "Ne buvez que de l'eau propre et sûre (bouteille scellée ou eau bouillie).",
-        "Maintenez une hygiène rigoureuse des mains en les lavant fréquemment à l'eau et au savon.",
-        "Consommez des repas chauds et entièrement cuits, évitez les aliments crus."
-    ],
-    "Fungal infection": [
-        "Appliquez des crèmes ou pommades antifongiques locales prescrites ou recommandées.",
-        "Gardez la zone de peau touchée propre, fraîche et parfaitement sèche.",
-        "Évitez de partager vos effets personnels comme les serviettes, vêtements ou brosses à cheveux.",
-        "Portez des vêtements amples et respirants en coton."
-    ],
-    "Common Cold": [
-        "Reposez-vous au maximum pour permettre à votre organisme de récupérer.",
-        "Hydratez-vous régulièrement en buvant de l'eau, des bouillons chauds ou des tisanes.",
-        "Utilisez des sprays nasaux salins ou un humidificateur d'air pour soulager la congestion.",
-        "Prenez du paracétamol ou de l'ibuprofène pour soulager les courbatures et la fièvre."
-    ],
-    "Pneumonia": [
-        "Consultez d'urgence un médecin pour obtenir une prescription d'antibiotiques ou d'antiviraux adaptés.",
-        "Restez strictement au lit et limitez tout effort physique.",
-        "Buvez des liquides chauds pour aider à fluidifier et évacuer le mucus bronchique.",
-        "Prenez des antipyrétiques si nécessaire et appelez les urgences en cas de détresse respiratoire."
-    ],
-    "Dimorphic hemmorhoids(piles)": [
-        "Adoptez un régime riche en fibres (fruits, légumes, céréales complètes) et buvez beaucoup d'eau.",
-        "Évitez de faire des efforts de poussée excessifs lors de la défécation.",
-        "Prenez des bains de siège tièdes pendant 15 à 20 minutes, 2 à 3 fois par jour.",
-        "Utilisez des crèmes locales apaisantes ou des analgésiques si l'inconfort persiste."
-    ],
-    "Heart attack": [
-        "Appelez immédiatement les services d'urgence (Samu au 15)—il s'agit d'une urgence vitale.",
-        "Croquez et avalez un comprimé d'aspirine si recommandé par le médecin régulateur des urgences.",
-        "Restez immobile et assis en attendant les secours ; ne tentez pas de vous rendre à l'hôpital par vos propres moyens.",
-        "Essayez de respirer calmement pour réduire la pression sur le muscle cardiaque."
-    ],
-    "Varicose veins": [
-        "Évitez de rester debout ou assis de manière prolongée sans bouger.",
-        "Surélevez vos jambes au-dessus du niveau du cœur dès que vous êtes au repos.",
-        "Portez quotidiennement des bas de contention adaptés.",
-        "Pratiquez une activité physique régulière (marche, vélo) pour stimuler la circulation veineuse."
-    ],
-    "Hypothyroidism": [
-        "Prenez votre traitement hormonal quotidien (lévothyroxine) strictement à jeun le matin.",
-        "Effectuez régulièrement vos bilans sanguins pour contrôler vos taux d'hormone TSH.",
-        "Consultez votre médecin avant de prendre de nouveaux compléments alimentaires qui pourraient altérer l'absorption.",
-        "Adoptez un régime équilibré pour aider à stabiliser votre poids et votre niveau d'énergie."
-    ],
-    "Hyperthyroidism": [
-        "Prenez rigoureusement vos antithyroïdiens de synthèse ou bêtabloquants prescrits.",
-        "Surveillez régulièrement votre rythme cardiaque et signalez toute palpitation à votre médecin.",
-        "Veillez à avoir des apports suffisants en calcium et vitamine D pour protéger votre densité osseuse.",
-        "Limitez le café et autres excitants afin de réduire la nervosité et la tachycardie."
-    ],
-    "Hypoglycemia": [
-        "Consommez immédiatement 15 à 20 g de sucre rapide (jus de fruit, morceaux de sucre, bonbons).",
-        "Contrôlez à nouveau votre glycémie après 15 minutes et répétez la prise de sucre si elle reste basse.",
-        "Prenez une collation ou un repas contenant des glucides complexes une fois le taux normalisé.",
-        "Consultez votre médecin pour ajuster vos doses d'insuline ou de antidiabétiques oraux."
-    ],
-    "Osteoarthristis": [
-        "Pratiquez régulièrement des exercices à faible impact (natation, cyclisme) pour renforcer les muscles de soutien.",
-        "Maintenez un poids de forme pour limiter la pression exercée sur les articulations porteuses.",
-        "Appliquez du chaud contre la raideur matinale ou du froid en cas de poussée inflammatoire douloureuse.",
-        "Utilisez des antalgiques ou des gels anti-inflammatoires locaux selon les recommandations de votre médecin."
-    ],
-    "Arthritis": [
-        "Consultez un rhumatologue pour mettre en place un plan de traitement de fond personnalisé.",
-        "Incorporez des aliments aux vertus anti-inflammatoires dans vos repas quotidiens.",
-        "Alternez des périodes d'exercices modérés et de repos complet lors des poussées douloureuses.",
-        "Utilisez des aides ergonomiques et ménagez vos articulations lors des tâches ménagères."
-    ],
-    "(vertigo) Paroymsal Positional Vertigo": [
-        "Évitez les mouvements brusques de la tête ainsi que l'extension forcée du cou vers l'arrière.",
-        "Consultez un kinésithérapeute spécialisé pour réaliser une manœuvre libératoire (manœuvre d'Epley).",
-        "Asseyez-vous immédiatement dès les premiers signes de rotation pour éviter une chute.",
-        "Sécurisez votre domicile en retirant les tapis ou obstacles au sol."
-    ],
-    "Acne": [
-        "Nettoyez votre visage en douceur deux fois par jour avec un gel nettoyant doux non comédogène.",
-        "Évitez absolument de percer ou presser vos boutons pour ne pas propager l'infection ou créer des cicatrices.",
-        "Utilisez des cosmétiques et crèmes hydratantes mentionnant la formule 'non comédogène'.",
-        "Appliquez des soins locaux ciblés contenant de l'acide salicylique ou du peroxyde de benzoyle."
-    ],
-    "Urinary tract infection": [
-        "Buvez d'importantes quantités d'eau pour aider à éliminer mécaniquement les bactéries par les urines.",
-        "Consultez un médecin rapidement pour obtenir une prescription d'antibiotiques adaptés.",
-        "Évitez les boissons irritantes comme l'alcool, le café ou les boissons très sucrées.",
-        "Urinez dès que l'envie se fait sentir et essuyez-vous toujours d'avant en arrière."
-    ],
-    "Psoriasis": [
-        "Hydratez très généreusement votre peau au quotidien avec des crèmes riches ou des émollients.",
-        "Évitez autant que possible les agressions cutanées et l'exposition prolongée au froid sec.",
-        "Suivez scrupuleusement votre traitement prescrit (dermocorticoïdes, photothérapie).",
-        "Identifiez et gérez vos facteurs de stress, qui sont de puissants déclencheurs de poussées de psoriasis."
-    ],
-    "Impetigo": [
-        "Consultez un médecin afin d'obtenir un traitement antibiotique local en pommade ou par voie orale.",
-        "Nettoyez délicatement les zones lésées à l'eau tiède et au savon pour éliminer les croûtes.",
-        "Couvrez les lésions d'une compresse stérile pour éviter l'auto-inoculation ou la transmission.",
-        "Gardez des ongles courts et propres pour limiter le grattage."
-    ],
-    "Gastroenteritis": [
-        "Privilégiez la réhydratation par de petites gorgées fréquentes de solutés de réhydratation ou d'eau salée.",
-        "Dès l'arrêt des vomissements, reprenez une alimentation légère et fade (riz, banane, compote).",
-        "Évitez temporairement les produits laitiers, les graisses, le café et les épices.",
-        "Lavez-vous minutieusement les mains au savon pour protéger votre entourage de la contagion."
-    ],
-    "Bronchial Asthma": [
-        "Gardez en permanence sur vous votre inhalateur de secours à action rapide (bronchodilatateur).",
-        "Identifiez et limitez les facteurs déclencheurs d'essoufflement (poussière, fumée, air froid, pollens).",
-        "Prenez régulièrement votre traitement de fond quotidien même en l'absence de crise.",
-        "Appelez immédiatement les urgences si votre respiration ne s'améliore pas après utilisation de l'inhalateur."
-    ],
-    "Hypertension": [
-        "Adoptez une alimentation pauvre en sel et riche en fruits et légumes.",
-        "Pratiquez une activité d'endurance modérée (comme la marche rapide) au moins 30 minutes par jour.",
-        "Mesurez régulièrement votre tension artérielle au calme à l'aide d'un tensiomètre automatique.",
-        "Prenez vos traitements antihypertenseurs tous les jours sans interruption."
-    ],
-    "Migraine": [
-        "Dès les premiers signes, allongez-vous dans une pièce sombre, fraîche et parfaitement silencieuse.",
-        "Appliquez une compresse froide ou une poche de glace sur votre front ou vos tempes.",
-        "Buvez de petites gorgées d'eau et évitez les repas lourds ou les aliments déclencheurs.",
-        "Prenez votre traitement spécifique de crise (triptans ou anti-inflammatoires) dès le début du mal de tête."
-    ],
-    "Cervical spondylosis": [
-        "Veillez à maintenir une bonne posture assise, notamment lors du travail sur ordinateur.",
-        "Réalisez de légers étirements du cou et des exercices de renforcement musculaire de la nuque.",
-        "Appliquez une source de chaleur douce sur la zone douloureuse pour détendre les tensions musculaires.",
-        "Utilisez un oreiller ergonomique adapté pour soutenir l'alignement de vos cervicales durant la nuit."
-    ],
-    "Paralysis (brain hemorrhage)": [
-        "Appelez immédiatement les urgences médicales (Samu au 15)—chaque minute compte.",
-        "Ne donnez absolument rien à manger ou à boire à la personne.",
-        "Allongez la personne sur le côté (position latérale de sécurité) si elle est inconsciente mais respire.",
-        "Surveillez en continu sa respiration en attendant l'arrivée rapide des secours médicaux."
-    ],
-    "Jaundice": [
-        "Consultez sans tarder un médecin pour diagnostiquer et traiter la cause sous-jacente liée au foie.",
-        "Proscrivez totalement l'alcool ainsi que l'automédication pour ne pas fatiguer davantage le foie.",
-        "Reposez-vous et assurez-vous d'avoir une alimentation saine, équilibrée et facile à digérer.",
-        "Signalez immédiatement au médecin l'apparition de troubles de la conscience ou de gonflements abdominaux."
-    ],
-    "Peptic ulcer diseae": [
-        "Prenez consciencieusement votre traitement anti-acide prescrit (inhibiteurs de la pompe à protons).",
-        "Évitez la prise d'anti-inflammatoires non stéroïdiens (comme l'ibuprofène ou l'aspirine) sans avis médical.",
-        "Limitez les aliments irritants comme les plats très épicés, acides ou trop gras.",
-        "Supprimez le tabac et l'alcool, qui ralentissent grandement la cicatrisation de l'estomac."
-    ],
-    "AIDS": [
-        "Consultez régulièrement votre médecin spécialiste pour suivre et ajuster votre traitement antirétroviral (TRV).",
-        "Prenez vos médicaments chaque jour à heure fixe afin d'assurer l'efficacité du contrôle viral.",
-        "Protégez-vous des infections opportunistes par une hygiène rigoureuse et des vaccins à jour.",
-        "Effectuez régulièrement vos bilans sanguins pour suivre vos taux de lymphocytes CD4 et de charge virale."
-    ],
-    "Gerd": [
-        "Prenez des repas plus légers et fractionnés plutôt que des repas copieux et gras.",
-        "Attendez au moins 2 à 3 heures après votre repas avant de vous allonger ou d'aller dormir.",
-        "Surélevez la tête de votre lit de quelques centimètres.",
-        "Évitez les aliments favorisant le reflux (chocolat, menthe, café, boissons gazeuses, graisses)."
-    ],
-    "Chronic cholestasis": [
-        "Consultez un hépatologue pour le suivi régulier de l'écoulement biliaire et des fonctions du foie.",
-        "Adoptez un régime pauvre en graisses et discutez d'une supplémentation en vitamines liposolubles (A, D, E, K).",
-        "Utilisez les traitements prescrits par votre médecin pour atténuer les fortes démangeaisons cutanées.",
-        "Effectuez régulièrement vos prises de sang pour surveiller le bilan hépatique."
-    ],
-    "Pure hypocholesterolemia": [
-        "Consultez votre médecin traitant afin d'explorer la cause sous-jacente (hyperthyroïdie, malabsorption).",
-        "Adoptez un régime alimentaire varié incluant de bonnes graisses d'origine végétale (huile d'olive, avocat).",
-        "Faites un suivi nutritionnel régulier pour éviter les carences en vitamines et minéraux.",
-        "Discutez de vos résultats cliniques avec votre praticien pour adapter votre prise en charge globale."
-    ],
-    "Hepatitis A": [
-        "Restez au repos complet et évitez toute forme d'effort physique intense.",
-        "Hydratez-vous en buvant fréquemment de l'eau ou des solutions de réhydratation.",
-        "Proscrivez l'alcool et demandez l'avis d'un médecin avant de prendre du paracétamol.",
-        "Lavez-vous soigneusement les mains après chaque passage aux toilettes pour éviter de contaminer vos proches."
-    ],
-    "Hepatitis B": [
-        "Consultez un hépatologue pour déterminer la nécessité d'un traitement antiviral.",
-        "Évitez impérativement les boissons alcoolisées afin de préserver votre foie d'un stress supplémentaire.",
-        "Consommez des repas équilibrés et observez un rythme de repos suffisant.",
-        "Prenez des précautions lors des rapports sexuels pour éviter de transmettre le virus à vos partenaires."
-    ],
-    "Hepatitis C": [
-        "Consultez un spécialiste pour bénéficier des nouveaux antiviraux à action directe (guérison en quelques semaines).",
-        "Évitez la consommation d'alcool et ne prenez aucun traitement sans avis de votre médecin.",
-        "Ne partagez aucun objet d'hygiène personnelle pouvant contenir des traces de sang (rasoir, coupe-ongles).",
-        "Faites surveiller régulièrement l'état de votre foie par des examens biologiques et échographiques."
-    ],
-    "Hepatitis D": [
-        "Consultez un spécialiste pour un suivi conjoint des infections par l'hépatite B et l'hépatite D.",
-        "Respectez scrupuleusement le protocole thérapeutique ciblant la co-infection virale.",
-        "Adoptez un mode de vie sain, sans alcool, pour soutenir la régénération du foie.",
-        "Faites des contrôles réguliers de charge virale et d'enzymes hépatiques."
-    ],
-    "Hepatitis E": [
-        "Assurez-vous un repos physique de qualité et buvez beaucoup d'eau pour éliminer les toxines.",
-        "Évitez de consommer de l'alcool et limitez l'usage de médicaments non prescrits par votre médecin.",
-        "Consultez immédiatement un médecin si vous êtes enceinte, l'hépatite E pouvant s'avérer très grave dans ce cas.",
-        "Consommez exclusivement de l'eau potable sûre et des aliments parfaitement cuits."
-    ],
-    "Alcoholic hepatitis": [
-        "Arrêtez de manière totale, définitive et immédiate toute consommation de boissons alcoolisées.",
-        "Faites-vous accompagner par un médecin ou un addictologue pour faciliter le sevrage en toute sécurité.",
-        "Suivez un programme nutritionnel riche en protéines et en calories pour combler les carences.",
-        "Surveillez attentivement l'apparition de complications de l'insuffisance hépatique."
-    ],
-    "Tuberculosis": [
-        "Prenez rigoureusement chaque jour l'ensemble des antibiotiques prescrits par votre médecin spécialiste.",
-        "Ne stoppez jamais votre traitement de manière anticipée afin de prévenir l'apparition de bactéries résistantes.",
-        "Restez isolé dans une pièce bien aérée et portez un masque chirurgical au début du traitement pour protéger autrui.",
-        "Adoptez une alimentation fortifiante et riche en calories pour soutenir vos défenses immunitaires."
-    ]
+    "Drug Reaction": ["Arrêtez immédiatement le médicament suspecté.", "Consultez d'urgence un médecin.", "Prenez des antihistaminiques si conseillé.", "Surveillez les signes respiratoires graves."],
+    "Malaria": ["Consultez immédiatement pour un test de diagnostic rapide.", "Commencez sans délai le traitement antipaludique prescrit.", "Reposez-vous et buvez beaucoup d'eau.", "Utilisez du paracétamol pour contrôler la fièvre."],
+    "Allergy": ["Évitez l'exposition à l'allergène déclencheur.", "Utilisez des antihistaminiques ou sprays nasaux.", "Gardez un EpiPen à portée de main si nécessaire.", "Consultez un allergologue si cela persiste."],
+    "Diabetes": ["Surveillez régulièrement votre glycémie.", "Respectez scrupuleusement votre traitement prescrit.", "Maintenez une alimentation à faible indice glycémique.", "Ayez toujours du sucre rapide sur vous."],
+    "Dengue": ["Reposez-vous et assurez-vous d'avoir une excellente hydratation.", "Prenez du paracétamol ; évitez l'aspirine ou l'ibuprofène.", "Protégez-vous des piqûres de moustiques.", "Surveillez l'apparition de signes d'alerte graves."],
+    "Typhoid": ["Consultez immédiatement pour une antibiothérapie adaptée.", "Ne buvez que de l'eau propre (bouteille ou bouillie).", "Lavez-vous fréquemment les mains au savon.", "Consommez des repas chauds entièrement cuits."],
+    "Fungal infection": ["Appliquez des pommades antifongiques locales.", "Gardez la zone touchée propre et sèche.", "Ne partagez pas vos effets personnels.", "Portez des vêtements amples en coton."],
+    "Common Cold": ["Reposez-vous au maximum pour récupérer.", "Hydratez-vous en buvant de l'eau ou des tisanes.", "Utilisez des sprays nasaux salins.", "Prenez du paracétamol contre les courbatures."],
+    "Pneumonia": ["Consultez d'urgence un médecin pour des antibiotiques.", "Restez au lit et limitez tout effort.", "Buvez des liquides chauds pour fluidifier le mucus.", "Appelez les urgences en cas de détresse respiratoire."],
+    "Dimorphic hemmorhoids(piles)": ["Adoptez un régime très riche en fibres.", "Évitez les efforts de poussée excessifs.", "Prenez des bains de siège tièdes.", "Utilisez des crèmes locales apaisantes."],
+    "Heart attack": ["Appelez immédiatement le SAMU (15) - Urgence vitale !", "Croquez de l'aspirine si validé par les secours.", "Restez immobile et assis en attendant.", "Essayez de respirer le plus calmement possible."],
+    "Varicose veins": ["Évitez de rester debout de manière prolongée.", "Surélevez vos jambes au repos.", "Portez vos bas de contention au quotidien.", "Pratiquez une activité physique régulière."],
+    "Hypothyroidism": ["Prenez votre traitement hormonal strictement à jeun.", "Contrôlez régulièrement vos taux de TSH.", "Consultez avant de prendre de nouveaux compléments.", "Adoptez un régime alimentaire équilibré."],
+    "Hyperthyroidism": ["Prenez rigoureusement vos antithyroïdiens prescrits.", "Surveillez vos pulsations cardiaques.", "Assurez des apports suffisants en calcium.", "Limitez le café et les excitants."],
+    "Hypoglycemia": ["Consommez immédiatement 15g de sucre rapide.", "Contrôlez la glycémie après 15 minutes.", "Prenez une collation de glucides complexes.", "Consultez pour adapter vos doses de traitement."],
+    "Osteoarthristis": ["Pratiquez des exercices à faible impact.", "Maintenez un poids de forme pour soulager vos articulations.", "Appliquez du chaud (raideur) ou du froid (poussée).", "Utilisez des gels anti-inflammatoires locaux."],
+    "Arthritis": ["Consultez un rhumatologue pour un suivi de fond.", "Incorporez des aliments anti-inflammatoires.", "Reposez-vous pendant les poussées douloureuses.", "Utilisez des aides ergonomiques au quotidien."],
+    "(vertigo) Paroymsal Positional Vertigo": ["Évitez les mouvements brusques de la tête.", "Consultez pour réaliser une manœuvre d'Epley.", "Asseyez-vous immédiatement dès les premiers signes.", "Sécurisez votre domicile pour éviter les chutes."],
+    "Acne": ["Nettoyez votre visage avec un gel doux non comédogène.", "Évitez absolument de percer vos boutons.", "Utilisez des cosmétiques non comédogènes.", "Appliquez des soins à l'acide salicylique."],
+    "Urinary tract infection": ["Buvez d'importantes quantités d'eau.", "Consultez rapidement pour des antibiotiques.", "Évitez l'alcool, le café et le sucre.", "Urinez dès que l'envie se fait sentir."],
+    "Psoriasis": ["Hydratez généreusement votre peau au quotidien.", "Évitez l'exposition prolongée au froid sec.", "Suivez scrupuleusement votre traitement prescrit.", "Gérez votre stress, puissant déclencheur."],
+    "Impetigo": ["Consultez pour un traitement antibiotique local.", "Nettoyez à l'eau tiède pour retirer les croûtes.", "Couvrez les lésions d'une compresse stérile.", "Gardez des ongles courts et propres."],
+    "Gastroenteritis": ["Privilégiez la réhydratation par petites gorgées.", "Reprenez une alimentation fade (riz, banane).", "Évitez les produits laitiers et les graisses.", "Lavez-vous minutieusement les mains au savon."],
+    "Bronchial Asthma": ["Gardez en permanence votre inhalateur de secours.", "Limitez les facteurs déclencheurs (poussière, tabac).", "Prenez régulièrement votre traitement de fond.", "Appelez les urgences si la crise persiste."],
+    "Hypertension": ["Adoptez une alimentation pauvre en sel.", "Pratiquez 30 minutes de marche par jour.", "Mesurez régulièrement votre tension artérielle.", "Prenez vos traitements tous les jours."],
+    "Migraine": ["Allongez-vous dans une pièce sombre et silencieuse.", "Appliquez une compresse froide sur vos tempes.", "Buvez de l'eau et évitez les repas lourds.", "Prenez votre traitement spécifique dès le début."],
+    "Cervical spondylosis": ["Veillez à maintenir une bonne posture assise.", "Réalisez de légers étirements de la nuque.", "Appliquez une source de chaleur douce.", "Utilisez un oreiller ergonomique adapté."],
+    "Paralysis (brain hemorrhage)": ["Appelez immédiatement les secours médicaux !", "Ne donnez rien à manger ou à boire.", "Allongez la personne sur le côté si inconsciente.", "Surveillez en continu sa respiration."],
+    "Jaundice": ["Consultez sans tarder un médecin pour le foie.", "Proscrivez totalement l'alcool et l'automédication.", "Mangez sainement avec des repas faciles à digérer.", "Signalez tout trouble de la conscience."],
+    "Peptic ulcer diseae": ["Prenez votre traitement anti-acide prescrit.", "Évitez l'ibuprofène et l'aspirine sans avis.", "Limitez les plats très épicés ou acides.", "Supprimez le tabac et l'alcool."],
+    "AIDS": ["Consultez régulièrement votre spécialiste TRV.", "Prenez vos médicaments chaque jour à heure fixe.", "Protégez-vous des infections opportunistes.", "Effectuez vos bilans sanguins régulièrement."],
+    "Gerd": ["Prenez des repas plus légers et fractionnés.", "Attendez 3 heures avant de vous allonger.", "Surélevez la tête de votre lit.", "Évitez le chocolat, le café et les graisses."],
+    "Chronic cholestasis": ["Consultez un hépatologue pour votre bilan.", "Adoptez un régime pauvre en graisses.", "Utilisez les traitements contre les démangeaisons.", "Surveillez régulièrement votre bilan hépatique."],
+    "Pure hypocholesterolemia": ["Consultez votre médecin pour en chercher la cause.", "Incorporez de bonnes graisses d'origine végétale.", "Faites un suivi nutritionnel régulier.", "Adaptez votre prise en charge globale."],
+    "Hepatitis A": ["Restez au repos complet sans effort intense.", "Hydratez-vous fréquemment.", "Proscrivez l'alcool et le paracétamol sans avis.", "Lavez-vous soigneusement les mains."],
+    "Hepatitis B": ["Consultez un hépatologue pour le suivi.", "Évitez impérativement toutes les boissons alcoolisées.", "Consommez des repas équilibrés.", "Prenez des précautions lors des rapports."],
+    "Hepatitis C": ["Consultez pour bénéficier des nouveaux antiviraux.", "Évitez l'alcool et l'automédication.", "Ne partagez aucun objet d'hygiène personnelle.", "Faites surveiller régulièrement l'état de votre foie."],
+    "Hepatitis D": ["Consultez un spécialiste pour un suivi conjoint B/D.", "Respectez scrupuleusement le protocole.", "Adoptez un mode de vie sain sans alcool.", "Contrôlez régulièrement vos enzymes hépatiques."],
+    "Hepatitis E": ["Assurez-vous un repos de qualité et buvez de l'eau.", "Évitez l'alcool et les médicaments non prescrits.", "Consultez d'urgence si vous êtes enceinte.", "Consommez de l'eau potable parfaitement sûre."],
+    "Alcoholic hepatitis": ["Arrêtez définitivement toute consommation d'alcool.", "Faites-vous accompagner par un addictologue.", "Suivez un programme nutritionnel riche en protéines.", "Surveillez de près les complications."],
+    "Tuberculosis": ["Prenez rigoureusement vos antibiotiques prescrits.", "Ne stoppez jamais votre traitement de fond.", "Restez isolé dans une pièce bien aérée au départ.", "Adoptez une alimentation fortifiante."]
 }
 
 RECOMMENDATIONS_MALADIES_EN = {
-    "Drug Reaction": [
-        "Immediately stop taking the suspected medication.",
-        "Seek urgent medical evaluation from a physician.",
-        "Take antihistamines if advised by a doctor to soothe mild itching.",
-        "Monitor for severe signs like breathing difficulties or swelling (call emergency services if these occur)."
-    ],
-    "Malaria": [
-        "Seek immediate clinical diagnostic testing (blood smear/RDT).",
-        "Start prescribed antimalarial treatment without delay to prevent severe complications.",
-        "Rest and drink plenty of fluids to stay hydrated.",
-        "Use paracetamol to control high fevers as directed."
-    ],
-    "Allergy": [
-        "Identify and avoid exposure to the triggering allergen.",
-        "Use over-the-counter antihistamines or nasal sprays to manage symptoms.",
-        "Keep an epinephrine auto-injector (EpiPen) nearby if you have a history of severe anaphylaxis.",
-        "Consult an allergist if symptoms persist or worsen."
-    ],
-    "Diabetes": [
-        "Monitor your blood glucose levels regularly.",
-        "Follow your prescribed insulin or oral medication regimen.",
-        "Maintain a structured, low-glycemic index diet and stay active.",
-        "Carry fast-acting carbohydrates (like juice or glucose tablets) to treat sudden hypoglycemia."
-    ],
-    "Dengue": [
-        "Rest as much as possible and stay highly hydrated.",
-        "Take paracetamol to manage fever and pain; avoid aspirin or ibuprofen as they can increase bleeding risks.",
-        "Prevent mosquito bites to stop the virus from spreading.",
-        "Watch closely for warning signs of severe Dengue, such as persistent vomiting or bleeding."
-    ],
-    "Typhoid": [
-        "Seek immediate medical attention to obtain a prescription for antibiotic therapy.",
-        "Drink only clean, safe, bottled or boiled water.",
-        "Maintain strict hand hygiene with soap and water.",
-        "Eat fully cooked, hot meals and avoid raw foods."
-    ],
-    "Fungal infection": [
-        "Apply over-the-counter or prescribed topical antifungal creams.",
-        "Keep the affected skin clean, cool, and thoroughly dry.",
-        "Avoid sharing personal items like towels, clothes, or hairbrushes.",
-        "Wear loose-fitting, breathable cotton clothing."
-    ],
-    "Common Cold": [
-        "Get plenty of rest to allow your body to recover.",
-        "Stay hydrated by drinking plenty of water, broth, or hot teas.",
-        "Use saline nasal sprays or room humidifiers to soothe congestion.",
-        "Take paracetamol or ibuprofen to alleviate body aches and fever."
-    ],
-    "Pneumonia": [
-        "Consult a doctor immediately to receive targeted antibiotics or antivirals.",
-        "Get plenty of bed rest and limit physical exertion.",
-        "Drink warm fluids to help loosen mucus in your chest.",
-        "Take fever reducers if necessary and seek emergency care if you experience severe shortness of breath."
-    ],
-    "Dimorphic hemmorhoids(piles)": [
-        "Eat a high-fiber diet (fruits, vegetables, whole grains) and drink plenty of water.",
-        "Avoid straining during bowel movements.",
-        "Take warm sitz baths for 15-20 minutes, 2 to 3 times a day.",
-        "Use over-the-counter topical ointments or pain relievers if discomfort persists."
-    ],
-    "Heart attack": [
-        "Call emergency services immediately—this is a life-threatening emergency.",
-        "Chew and swallow an aspirin if recommended by emergency dispatch.",
-        "Rest quietly while waiting for emergency responders; do not try to drive yourself to the hospital.",
-        "Stay calm and sit down to ease pressure on the heart."
-    ],
-    "Varicose veins": [
-        "Avoid standing or sitting for long periods without moving.",
-        "Elevate your legs above heart level when resting.",
-        "Wear graduated compression stockings daily.",
-        "Exercise regularly to improve blood circulation in your legs."
-    ],
-    "Hypothyroidism": [
-        "Take your prescribed daily thyroid hormone replacement medication (levothyroxine) on an empty stomach.",
-        "Schedule regular blood tests to monitor your thyroid-stimulating hormone (TSH) levels.",
-        "Consult your physician before taking new supplements that can interfere with absorption.",
-        "Maintain a balanced diet to manage energy levels and metabolic changes."
-    ],
-    "Hyperthyroidism": [
-        "Follow your prescribed antithyroid medication, beta-blockers, or treatment plan closely.",
-        "Monitor your heart rate regularly and report palpitations to your doctor.",
-        "Ensure adequate intake of calcium and Vitamin D to protect bone density.",
-        "Limit excessive caffeine and stimulant intake to manage anxiety and rapid heart rate."
-    ],
-    "Hypoglycemia": [
-        "Consume 15-20 grams of fast-acting glucose (e.g., fruit juice, candy, or glucose tablets) immediately.",
-        "Recheck blood sugar levels after 15 minutes and repeat if levels remain low.",
-        "Eat a small meal or snack containing complex carbohydrates once your blood sugar returns to normal.",
-        "Notify your doctor to adjust your diabetes medication if hypoglycemia occurs frequently."
-    ],
-    "Osteoarthristis": [
-        "Engage in regular, low-impact exercises (swimming, cycling, walking) to strengthen supporting muscles.",
-        "Maintain a healthy weight to reduce pressure on weight-bearing joints.",
-        "Apply hot packs to relieve stiffness or cold packs to reduce joint inflammation.",
-        "Use over-the-counter pain relievers or topical gels as directed."
-    ],
-    "Arthritis": [
-        "Consult a rheumatologist for a tailored treatment plan.",
-        "Incorporate anti-inflammatory foods into your diet.",
-        "Balance active exercises with adequate rest during flare-ups.",
-        "Utilize joint protection techniques and ergonomic tools to reduce daily joint strain."
-    ],
-    "(vertigo) Paroymsal Positional Vertigo": [
-        "Avoid sudden head movements and tilting your head far backward.",
-        "Consult a physical therapist or specialist to perform the Epley maneuver.",
-        "Sit down immediately when you feel a dizzy spell coming on.",
-        "Ensure your home environment is safe from tripping hazards."
-    ],
-    "Acne": [
-        "Wash your face gently twice a day with a mild, non-drying cleanser.",
-        "Avoid squeezing, popping, or picking at pimples to prevent scarring.",
-        "Use non-comedogenic (pore-clogging-free) skincare and cosmetic products.",
-        "Apply targeted topical treatments containing salicylic acid or benzoyl peroxide."
-    ],
-    "Urinary tract infection": [
-        "Drink plenty of water to help flush bacteria out of your urinary system.",
-        "Consult a healthcare professional to obtain a prescription for antibiotic therapy.",
-        "Avoid irritating fluids like alcohol, caffeine, and highly acidic drinks.",
-        "Urinate promptly when you feel the urge and always wipe from front to back."
-    ],
-    "Psoriasis": [
-        "Keep your skin well-moisturized with thick ointments or creams.",
-        "Avoid dry or cold weather triggers if possible.",
-        "Follow your prescribed topical steroids, phototherapy, or systemic treatments.",
-        "Identify and manage stressors, which are common triggers for psoriasis flare-ups."
-    ],
-    "Impetigo": [
-        "Consult a doctor for prescription topical or oral antibiotic ointment.",
-        "Gently wash the sores with soap and warm water to remove loose crusts.",
-        "Cover the sores with a clean bandage to prevent spreading the infection.",
-        "Keep your nails short and avoid scratching the affected areas."
-    ],
-    "Gastroenteritis": [
-        "Focus on replacing lost fluids with oral rehydration solutions, clear broths, or water.",
-        "Eat small, bland meals (such as bananas, rice, applesauce, toast) once vomiting stops.",
-        "Avoid dairy, caffeine, alcohol, fatty, and highly seasoned foods.",
-        "Maintain strict handwashing habits to protect others from getting infected."
-    ],
-    "Bronchial Asthma": [
-        "Keep your quick-relief (rescue) inhaler with you at all times.",
-        "Identify and minimize exposure to asthma triggers (pollen, dust mites, cold air, smoke).",
-        "Follow your personalized asthma action plan and take long-term controller medications regularly.",
-        "Seek immediate emergency care if your breathing does not improve after using your rescue inhaler."
-    ],
-    "Hypertension": [
-        "Maintain a low-sodium, heart-healthy diet.",
-        "Engage in moderate aerobic physical activity for at least 30 minutes most days.",
-        "Monitor your blood pressure levels at home and keep a log for your doctor.",
-        "Take your prescribed antihypertensive medications consistently."
-    ],
-    "Migraine": [
-        "Rest in a quiet, dark, and cool room at the onset of symptoms.",
-        "Apply a cold compress to your forehead or the back of your neck.",
-        "Hydrate with small sips of water and avoid triggering foods.",
-        "Take abortive migraine medications as directed by your physician."
-    ],
-    "Cervical spondylosis": [
-        "Practice good posture while sitting, standing, and working at a computer.",
-        "Perform regular gentle neck stretching and strengthening exercises.",
-        "Apply a heating pad or ice pack to relieve localized neck pain.",
-        "Use a supportive neck pillow designed for cervical alignment while sleeping."
-    ],
-    "Paralysis (brain hemorrhage)": [
-        "Call emergency medical services immediately—this is a critical emergency.",
-        "Do not give the person anything to eat or drink.",
-        "Help the person lie down on their side with their head slightly elevated if they are conscious.",
-        "Monitor their breathing and responsiveness closely until emergency personnel arrive."
-    ],
-    "Jaundice": [
-        "Consult a physician promptly to diagnose and treat the underlying hepatic or biliary issue.",
-        "Avoid all alcohol and medications that can strain or damage the liver.",
-        "Stay hydrated and consume a nutritious, easily digestible diet.",
-        "Monitor for severe signs like abdominal swelling, confusion, or severe bleeding."
-    ],
-    "Peptic ulcer diseae": [
-        "Follow your prescribed regimen, including proton pump inhibitors (PPIs) or antibiotics.",
-        "Avoid nonsteroidal anti-inflammatory drugs (NSAIDs) like aspirin or ibuprofen.",
-        "Limit foods that irritate your stomach, such as spicy, fatty, or highly acidic items.",
-        "Manage stress levels and avoid smoking or alcohol consumption."
-    ],
-    "AIDS": [
-        "Consult an infectious disease specialist for antiretroviral therapy (ART) management.",
-        "Adhere strictly to your daily medication schedule to maintain viral suppression.",
-        "Protect yourself from opportunistic infections by practicing food safety and maintaining up-to-date vaccinations.",
-        "Schedule regular clinical follow-ups to track your CD4 cell count and viral load."
-    ],
-    "Gerd": [
-        "Eat smaller, more frequent meals instead of large, heavy portions.",
-        "Avoid lying down for at least 3 hours after eating.",
-        "Elevate the head of your bed by 6 to 9 inches.",
-        "Limit trigger foods, including fried dishes, chocolate, mint, caffeine, and acidic items."
-    ],
-    "Chronic cholestasis": [
-        "Consult a hepatologist for targeted diagnostic and therapeutic management.",
-        "Follow a low-fat diet and consider fat-soluble vitamin supplements (A, D, E, K) under doctor supervision.",
-        "Use prescribed medications to alleviate severe itching (pruritus).",
-        "Monitor liver function tests regularly."
-    ],
-    "Pure hypocholesterolemia": [
-        "Consult your healthcare provider to investigate underlying causes, such as malabsorption or hyperthyroidism.",
-        "Adopt a balanced, nutrient-dense diet rich in healthy fats.",
-        "Monitor your nutritional status regularly.",
-        "Discuss any necessary adjustments to your diet or medications with your physician."
-    ],
-    "Hepatitis A": [
-        "Ensure plenty of bed rest and avoid strenuous physical activity.",
-        "Stay hydrated by sipping water, broth, or electrolyte drinks.",
-        "Avoid all alcohol and consult your doctor before taking any over-the-counter medications to protect your liver.",
-        "Wash hands thoroughly to prevent spreading the virus to household members."
-    ],
-    "Hepatitis B": [
-        "Consult a specialist to determine if antiviral medications are necessary.",
-        "Avoid alcohol and liver-toxic substances.",
-        "Eat a balanced, healthy diet and get adequate rest.",
-        "Take precautions to prevent transmitting the virus to partners or family members."
-    ],
-    "Hepatitis C": [
-        "Consult a gastroenterologist or hepatologist to discuss direct-acting antiviral (DAA) treatment.",
-        "Avoid alcohol and check with your physician before starting any new supplements or medications.",
-        "Cover cuts and sores, and do not share personal items like razors or toothbrushes.",
-        "Monitor liver health indicators through regular clinical check-ups."
-    ],
-    "Hepatitis D": [
-        "Consult a liver disease specialist for specialized evaluation and monitoring.",
-        "Adhere to treatment strategies targeting both Hepatitis B and D co-infections.",
-        "Avoid alcohol and eat a nutrient-rich diet to support liver function.",
-        "Get regular blood tests to track viral activity and liver health."
-    ],
-    "Hepatitis E": [
-        "Get plenty of physical rest and stay well-hydrated.",
-        "Avoid alcohol and unnecessary over-the-counter drugs.",
-        "Seek immediate medical attention if you are pregnant, as Hepatitis E can lead to severe complications.",
-        "Ensure all drinking water is clean and food is thoroughly cooked."
-    ],
-    "Alcoholic hepatitis": [
-        "Stop consuming alcohol entirely and permanently.",
-        "Consult a healthcare professional for specialized medical and nutritional support.",
-        "Follow a high-protein, calorie-dense diet to correct nutritional deficiencies.",
-        "Monitor closely for severe liver complications like jaundice or fluid buildup."
-    ],
-    "Tuberculosis": [
-        "Consult a specialist and strictly follow your prescribed multi-drug treatment course.",
-        "Complete the entire antibiotic regimen to prevent drug-resistant strains.",
-        "Stay in a well-ventilated room and wear a mask around others during the initial infectious phase.",
-        "Maintain a balanced diet and get plenty of rest to support immune recovery."
-    ]
+    "Drug Reaction": ["Immediately stop taking the suspected medication.", "Seek urgent medical evaluation from a physician.", "Take antihistamines if advised by a doctor.", "Monitor for severe signs like breathing difficulties."],
+    "Malaria": ["Seek immediate clinical diagnostic testing.", "Start prescribed antimalarial treatment without delay.", "Rest and drink plenty of fluids.", "Use paracetamol to control high fevers."],
+    "Allergy": ["Identify and avoid exposure to the triggering allergen.", "Use antihistamines or nasal sprays.", "Keep an epinephrine auto-injector nearby.", "Consult an allergist if symptoms persist."],
+    "Diabetes": ["Monitor your blood glucose levels regularly.", "Follow your prescribed medication regimen.", "Maintain a structured, low-glycemic index diet.", "Carry fast-acting carbohydrates with you."],
+    "Dengue": ["Rest as much as possible and stay hydrated.", "Take paracetamol; avoid aspirin or ibuprofen.", "Prevent mosquito bites.", "Watch closely for warning signs like vomiting."],
+    "Typhoid": ["Seek immediate medical attention for antibiotics.", "Drink only clean, safe, bottled or boiled water.", "Maintain strict hand hygiene with soap.", "Eat fully cooked, hot meals."],
+    "Fungal infection": ["Apply topical antifungal creams.", "Keep the affected skin clean and dry.", "Avoid sharing personal items like towels.", "Wear loose-fitting cotton clothing."],
+    "Common Cold": ["Get plenty of rest to allow recovery.", "Stay hydrated by drinking water or hot teas.", "Use saline nasal sprays.", "Take paracetamol for body aches."],
+    "Pneumonia": ["Consult a doctor immediately for targeted antibiotics.", "Get plenty of bed rest.", "Drink warm fluids to loosen mucus.", "Seek emergency care if breathing worsens."],
+    "Dimorphic hemmorhoids(piles)": ["Eat a high-fiber diet and drink water.", "Avoid straining during bowel movements.", "Take warm sitz baths for 15-20 minutes.", "Use topical ointments if needed."],
+    "Heart attack": ["Call emergency services immediately (911/15)!", "Chew an aspirin if recommended by dispatch.", "Rest quietly while waiting for responders.", "Stay calm and sit down."],
+    "Varicose veins": ["Avoid standing or sitting for long periods.", "Elevate your legs above heart level when resting.", "Wear graduated compression stockings daily.", "Exercise regularly to improve circulation."],
+    "Hypothyroidism": ["Take replacement medication on an empty stomach.", "Schedule regular blood tests for TSH.", "Consult your physician before new supplements.", "Maintain a balanced diet."],
+    "Hyperthyroidism": ["Follow your prescribed antithyroid medication closely.", "Monitor your heart rate regularly.", "Ensure adequate intake of calcium.", "Limit excessive caffeine intake."],
+    "Hypoglycemia": ["Consume 15-20 grams of fast-acting glucose.", "Recheck blood sugar levels after 15 minutes.", "Eat a small meal containing complex carbs.", "Notify your doctor if it occurs frequently."],
+    "Osteoarthristis": ["Engage in regular, low-impact exercises.", "Maintain a healthy weight.", "Apply hot packs or cold packs.", "Use over-the-counter pain relievers."],
+    "Arthritis": ["Consult a rheumatologist for a tailored plan.", "Incorporate anti-inflammatory foods.", "Balance active exercises with rest.", "Utilize joint protection techniques."],
+    "(vertigo) Paroymsal Positional Vertigo": ["Avoid sudden head movements.", "Consult a specialist for the Epley maneuver.", "Sit down immediately when dizzy.", "Ensure your home is safe from tripping hazards."],
+    "Acne": ["Wash your face gently with a mild cleanser.", "Avoid squeezing or picking at pimples.", "Use non-comedogenic skincare products.", "Apply targeted topical treatments."],
+    "Urinary tract infection": ["Drink plenty of water to flush bacteria.", "Consult a professional for antibiotics.", "Avoid alcohol and caffeine.", "Urinate promptly when you feel the urge."],
+    "Psoriasis": ["Keep your skin well-moisturized.", "Avoid dry or cold weather triggers.", "Follow your prescribed topical treatments.", "Identify and manage stressors."],
+    "Impetigo": ["Consult a doctor for prescription ointment.", "Gently wash sores with soap and warm water.", "Cover sores with a clean bandage.", "Keep your nails short and clean."],
+    "Gastroenteritis": ["Focus on replacing lost fluids.", "Eat small, bland meals (rice, bananas).", "Avoid dairy, caffeine, and fatty foods.", "Maintain strict handwashing habits."],
+    "Bronchial Asthma": ["Keep your rescue inhaler with you at all times.", "Minimize exposure to asthma triggers.", "Follow your personalized action plan.", "Seek emergency care if breathing fails."],
+    "Hypertension": ["Maintain a low-sodium, heart-healthy diet.", "Engage in moderate physical activity.", "Monitor blood pressure levels at home.", "Take medications consistently."],
+    "Migraine": ["Rest in a quiet, dark, and cool room.", "Apply a cold compress to your forehead.", "Hydrate with small sips of water.", "Take abortive medications as directed."],
+    "Cervical spondylosis": ["Practice good posture while working.", "Perform regular gentle neck stretching.", "Apply a heating pad or ice pack.", "Use a supportive neck pillow."],
+    "Paralysis (brain hemorrhage)": ["Call emergency medical services immediately!", "Do not give anything to eat or drink.", "Help the person lie down on their side.", "Monitor breathing and responsiveness."],
+    "Jaundice": ["Consult a physician promptly for liver tracking.", "Avoid all alcohol and unprescribed pills.", "Consume a nutritious, easily digestible diet.", "Monitor for abdominal swelling."],
+    "Peptic ulcer diseae": ["Follow your prescribed proton pump inhibitors.", "Avoid NSAIDs like aspirin or ibuprofen.", "Limit spicy, fatty, or highly acidic items.", "Avoid smoking or alcohol consumption."],
+    "AIDS": ["Consult an infectious disease specialist for ART.", "Adhere strictly to your daily medication schedule.", "Protect yourself from opportunistic infections.", "Schedule regular clinical follow-ups."],
+    "Gerd": ["Eat smaller, more frequent meals.", "Avoid lying down for 3 hours after eating.", "Elevate the head of your bed.", "Limit fried dishes, chocolate, and caffeine."],
+    "Chronic cholestasis": ["Consult a hepatologist for targeted diagnostic.", "Follow a low-fat diet.", "Use prescribed medications for itching.", "Monitor liver function tests regularly."],
+    "Pure hypocholesterolemia": ["Consult your healthcare provider for causes.", "Adopt a balanced diet rich in healthy fats.", "Monitor your nutritional status regularly.", "Discuss any adjustments with your physician."],
+    "Hepatitis A": ["Ensure plenty of bed rest.", "Stay hydrated by sipping water.", "Avoid all alcohol and over-the-counter pills.", "Wash hands thoroughly."],
+    "Hepatitis B": ["Consult a specialist to check antiviral needs.", "Avoid alcohol and liver-toxic substances.", "Eat a balanced, healthy diet.", "Take precautions to prevent transmission."],
+    "Hepatitis C": ["Consult a hepatologist to discuss DAA treatment.", "Avoid alcohol and check before new pills.", "Do not share personal items like razors.", "Monitor liver health indicators."],
+    "Hepatitis D": ["Consult a liver specialist for monitoring.", "Adhere to treatment strategies for co-infection.", "Avoid alcohol and eat a nutrient-rich diet.", "Get regular blood tests."],
+    "Hepatitis E": ["Get plenty of rest and stay hydrated.", "Avoid alcohol and unnecessary drugs.", "Seek immediate attention if pregnant.", "Ensure drinking water is clean."],
+    "Alcoholic hepatitis": ["Stop consuming alcohol entirely.", "Consult a professional for support.", "Follow a high-protein, calorie-dense diet.", "Monitor closely for liver complications."],
+    "Tuberculosis": ["Consult a specialist and follow your course.", "Complete the entire antibiotic regimen.", "Stay in a well-ventilated room initially.", "Maintain a balanced diet."]
 }
 
 @login_required
 def index(request):
-    # -------------------------------------------------------------
-    # GESTION DES LANGUES : Session & Paramètre URL
-    # -------------------------------------------------------------
     lang = request.GET.get('lang', request.session.get('lang', 'fr'))
-    request.session['lang'] = lang  # On garde la langue en session
+    request.session['lang'] = lang
 
     resultat = None
     description = None
@@ -795,65 +296,80 @@ def index(request):
         symptomes_coches = request.POST.getlist('symptomes')
         
         if not symptomes_coches:
-            if lang == 'en':
-                error_message = "Please select at least one clinical symptom before executing the statistical analysis."
-            else:
-                error_message = "Veuillez sélectionner au moins un symptôme clinique avant d'exécuter l'analyse statistique."
+            error_message = "Please select at least one clinical symptom." if lang == 'en' else "Veuillez sélectionner au moins un symptôme clinique."
         else:
             vecteur_input = np.zeros(len(liste_symptomes))
-            
             for symp in symptomes_coches:
                 if symp in liste_symptomes:
                     index_symp = liste_symptomes.index(symp)
                     vecteur_input[index_symp] = 1
 
             df_input = pd.DataFrame([vecteur_input], columns=liste_symptomes)
-
             probabilites = modele.predict_proba(df_input)[0]
             classes = modele.classes_
-            
             predictions_associees = sorted(zip(classes, probabilites), key=lambda x: x[1], reverse=True)
             
             raw_resultat = predictions_associees[0][0]
+            confiance_principale = int(predictions_associees[0][1] * 100)
             
-            # Application de la langue sélectionnée aux résultats
             if lang == 'en':
                 resultat = raw_resultat
                 description = DESCRIPTIONS_MALADIES_EN.get(raw_resultat, "No description available.")
-                recommendations = RECOMMENDATIONS_MALADIES_EN.get(raw_resultat, ["Consult a medical professional for personalized advice."])
+                recommendations = RECOMMENDATIONS_MALADIES_EN.get(raw_resultat, ["Consult a medical professional."])
             else:
                 resultat = NOM_FRANCAIS_MALADIES.get(raw_resultat, raw_resultat)
                 description = DESCRIPTIONS_MALADIES_FR.get(raw_resultat, "Aucune description disponible.")
-                recommendations = RECOMMENDATIONS_MALADIES_FR.get(raw_resultat, ["Consultez un professionnel de la santé pour obtenir des conseils personnalisés."])
-
-            confiance_principale = int(predictions_associees[0][1] * 100)
+                recommendations = RECOMMENDATIONS_MALADIES_FR.get(raw_resultat, ["Consultez un professionnel de la santé."])
             
             for mal, prob in predictions_associees[:3]:
                 if prob > 0:
                     nom_affiche = mal if lang == 'en' else NOM_FRANCAIS_MALADIES.get(mal, mal)
-                    top_predictions.append({
-                        'nom': nom_affiche,
-                        'score': int(prob * 100)
-                    })
+                    top_predictions.append({'nom': nom_affiche, 'score': int(prob * 100)})
 
-    # -------------------------------------------------------------
-    # TRADUCTION DES SYMPTÔMES POUR LE TEMPLATE (FR ou EN)
-    # -------------------------------------------------------------
     liste_symptomes_traduits = []
     for symp in liste_symptomes:
         nom_propre_en = symp.replace('_', ' ').capitalize()
         nom_affiche = nom_propre_en if lang == 'en' else TRADUCTION_SYMPTOMES.get(symp, nom_propre_en)
-        
-        liste_symptomes_traduits.append({
-            'cle_technique': symp,
-            'nom_affichage': nom_affiche
-        })
+        liste_symptomes_traduits.append({'cle_technique': symp, 'nom_affichage': nom_affiche})
 
-    # Liste des symptômes cochés traduits pour la restitution
     if lang == 'en':
         symptomes_coches_affichage = [s.replace('_', ' ').capitalize() for s in symptomes_coches]
+        labels = {
+            "title": "PathoPredict Analytics — Algorithmic Inference Platform",
+            "btn_dataset": "Training Dataset", "btn_logout": "Sign Out",
+            "kpi_patho": "Classified Pathologies", "kpi_vars": "Explanatory Variables",
+            "kpi_obs": "Sampled Observations", "kpi_algo": "Ensemble Algorithm", "kpi_engine": "Inference Engine",
+            "inf_title": "Algorithmic Inference Result", "inf_session": "User Session",
+            "inf_class": "Estimated Primary Class :", "inf_conf": "Model Confidence Score",
+            "inf_synth": "📌 Clinical Description Synthesis", "inf_risk": "Distribution Risk Spectrum (Top 3) :",
+            "inf_rec": "🔬 Recommended Steps for Recovery :", "inf_warning": "⚠️ This automated prediction is based on statistical correlation algorithms. It is not a substitute for clinical medical evaluation.",
+            "matrix_title": "Clinical Configuration Matrix", "matrix_desc": "Select and combine observed parameters to submit the feature vector to the predictive model.",
+            "search_placeholder": "🔍 Filter clinical symptoms (e.g., pain, fever, cough)...", "active_params": "Active parameters for statistical analysis:",
+            "grid_empty": "Model Parameters Index", "grid_match": "Search Results Matches", "btn_submit": "Execute Statistical Analysis",
+            "off_title": "Source Dataset Matrix", "off_struct": "Variable Structure",
+            "off_struct_desc": "Each column represents a unique clinical symptom binarized in the dataset: 1 indicates symptom presence, and 0 represents its absence.",
+            "off_table_target": "Pathology Target", "off_table_itch": "itching", "off_table_rash": "skin_rash", "off_table_chill": "chills",
+            "off_balance": "Dataset Uniform Balance", "off_balance_desc": "The classifier is trained on a balanced database of 4,920 records with 132 distinct symptoms. Classes have an exact uniform distribution, securing maximum mathematical stability for the decision tree estimators."
+        }
     else:
         symptomes_coches_affichage = [TRADUCTION_SYMPTOMES.get(s, s.replace('_', ' ').capitalize()) for s in symptomes_coches]
+        labels = {
+            "title": "PathoPredict Analytics — Plateforme d'Inférence Algorithmique",
+            "btn_dataset": "Base d'Entraînement", "btn_logout": "Se déconnecter",
+            "kpi_patho": "Pathologies Classifiées", "kpi_vars": "Variables Explicatives",
+            "kpi_obs": "Observations Échantillonnées", "kpi_algo": "Algorithme d'Ensemble", "kpi_engine": "Moteur d'Inférence",
+            "inf_title": "Résultat de l'Inférence Algorithmique", "inf_session": "Session Utilisateur",
+            "inf_class": "Classe Principale Estimée :", "inf_conf": "Indice de confiance du modèle",
+            "inf_synth": "📌 Synthèse de la description clinique", "inf_risk": "Spectre de distribution des risques (Top 3) :",
+            "inf_rec": "🔬 Conseils & actions de première urgence :", "inf_warning": "⚠️ Cette prédiction automatisée est basée sur des algorithmes de corrélation statistique. Elle ne se substitue en aucun cas à une évaluation médicale clinique.",
+            "matrix_title": "Matrice de Configuration Clinique", "matrix_desc": "Sélectionnez et combinez les paramètres observés pour soumettre le vecteur de caractéristiques au modèle prédictif.",
+            "search_placeholder": "🔍 Filtrer les symptômes cliniques (ex : douleur, fièvre, toux)...", "active_params": "Paramètres actifs pour l'analyse statistique :",
+            "grid_empty": "Index des Paramètres du Modèle", "grid_match": "Résultats de la Recherche", "btn_submit": "Exécuter l'Analyse Statistique",
+            "off_title": "Matrice de la Source de Données", "off_struct": "Structure des Variables",
+            "off_struct_desc": "Chaque colonne représente un symptôme clinique unique binarisé dans le jeu de données : 1 indique la présence du symptôme, et 0 représente son absence.",
+            "off_table_target": "Pathologie Cible", "off_table_itch": "Démangeaisons", "off_table_rash": "Éruption cutanée", "off_table_chill": "Frissons froids",
+            "off_balance": "Équilibre Uniforme du Dataset", "off_balance_desc": "Le classifieur est entraîné sur une base de données équilibrée de 4 920 enregistrements avec 132 symptômes distincts. Les classes possèdent une distribution uniforme exacte, assurant une stabilité mathématique optimale pour les estimateurs de type arbre de décision."
+        }
 
     context = {
         'liste_symptomes': liste_symptomes_traduits,
@@ -865,7 +381,8 @@ def index(request):
         'confiance_principale': confiance_principale,
         'recommendations': recommendations,
         'error_message': error_message,
-        'lang': lang,  # On transmet la langue au template
+        'lang': lang,
+        'labels': labels,
     }
     return render(request, 'prediction_app/index.html', context)
 
