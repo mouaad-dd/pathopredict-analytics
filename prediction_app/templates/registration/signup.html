@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ labels.title }}</title>
+    <title>PathoPredict Analytics — Register</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -76,55 +76,65 @@
         width: 100%;
         margin-top: 10px;
       }
-      .lang-btn {
-        opacity: 0.4;
-        font-size: 1.4rem;
+      .lang-container a {
         text-decoration: none;
-        transition: opacity 0.2s;
+        font-size: 1.4rem;
+        transition: transform 0.2s ease;
         display: inline-block;
       }
-      .lang-btn:hover {
-        opacity: 1;
-      }
-      .lang-active {
-        opacity: 1;
-        border-bottom: 2px solid #3b82f6;
+      .lang-container a:hover {
+        transform: scale(1.2);
       }
     </style>
   </head>
   <body>
     <div class="signup-card">
       <div class="d-flex justify-content-between align-items-center mb-4">
-        <h3 class="fw-bold text-white m-0">{{ labels.title }}</h3>
-        <div class="d-flex gap-2">
-          <a
-            href="?lang=fr"
-            class="lang-btn {% if lang == 'fr' %}lang-active{% endif %}"
-            >🇫🇷</a
-          >
-          <a
-            href="?lang=en"
-            class="lang-btn {% if lang == 'en' %}lang-active{% endif %}"
-            >🇺🇸</a
-          >
+        <h3 class="fw-bold text-white m-0" id="signupTitle">Inscription</h3>
+        <div class="lang-container d-flex gap-2">
+          <a href="?lang=fr" title="Français">🇫🇷</a>
+          <a href="?lang=en" title="English">🇺🇸</a>
         </div>
       </div>
 
       <form method="POST">
         {% csrf_token %} {{ form.as_p }}
-        <button type="submit" class="btn btn-submit mb-3">
-          {{ labels.btn }}
+        <button type="submit" class="btn btn-submit mb-3" id="btnSubmit">
+          Créer mon compte
         </button>
       </form>
 
       <div class="text-center small mt-2">
-        <span class="text-muted">{{ labels.already }}</span>
+        <span class="text-muted" id="textAlready">Déjà inscrit ?</span>
         <a
           href="{% url 'login' %}"
           class="text-info text-decoration-none fw-medium"
-          >{{ labels.login }}</a
+          id="linkLogin"
+          >Se connecter</a
         >
       </div>
     </div>
+
+    <!-- CODE MAGIQUE D'INJECTION POUR LE SIGNUP -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const isEn = urlParams.get("lang") === "en";
+
+        if (isEn) {
+          document.getElementById("signupTitle").innerText = "Join Platform";
+          document.getElementById("btnSubmit").innerText = "Create Account";
+          document.getElementById("textAlready").innerText =
+            "Already registered? ";
+          document.getElementById("linkLogin").innerText = "Sign In";
+        } else {
+          document.getElementById("signupTitle").innerText =
+            "Rejoindre PathoPredict";
+          document.getElementById("btnSubmit").innerText = "Créer mon compte";
+          document.getElementById("textAlready").innerText = "Déjà inscrit ? ";
+          document.getElementById("linkLogin").innerText = "Se connecter";
+        }
+      });
+    </script>
   </body>
 </html>
