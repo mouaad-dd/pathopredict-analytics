@@ -598,6 +598,7 @@
     </div>
 
     <!-- SIDE PANEL (OFFCANVAS) -->
+    <!-- SIDE PANEL (OFFCANVAS) -->
     <div
       class="offcanvas offcanvas-end text-bg-dark"
       style="width: 500px"
@@ -609,11 +610,11 @@
         style="border-color: rgba(255, 255, 255, 0.08)"
       >
         <h5 class="offcanvas-title fw-bold text-white">
-          {% if lang == 'en' %}
-          <i class="bi bi-database-fill text-info me-2"></i>Source Dataset
-          Matrix {% else %}
-          <i class="bi bi-database-fill text-info me-2"></i>Matrice de la Source
-          de Données {% endif %}
+          {% if lang == "en" %}<i class="bi bi-database-fill text-info me-2"></i
+          >Source Dataset Matrix{% else %}<i
+            class="bi bi-database-fill text-info me-2"
+          ></i
+          >Matrice de la Source de Données{% endif %}
         </h5>
         <button
           type="button"
@@ -631,24 +632,24 @@
         >
           <h6 class="fw-bold text-white mb-2 fs-6">
             <i class="bi bi-info-circle text-info me-2"></i>
-            {% if lang == 'en' %}Variable Structure{% else %}Structure des
+            {% if lang == "en" %}Variable Structure{% else %}Structure des
             Variables{% endif %}
           </h6>
           <p
             class="small text-secondary mb-0"
             style="color: #94a3b8 !important"
           >
-            {% if lang == 'en' %} Each column represents a
+            {% if lang == "en" %}Each column represents a
             <strong>unique clinical symptom</strong> binarized in the dataset:
             <span class="text-white fw-semibold">1</span> indicates symptom
             presence, and
             <span class="text-white fw-semibold">0</span> represents its
-            absence. {% else %} Chaque colonne représente un
+            absence.{% else %}Chaque colonne représente un
             <strong>symptôme clinique unique</strong> binarisé dans le jeu de
             données : <span class="text-white fw-semibold">1</span> indique la
             présence du symptôme, et
             <span class="text-white fw-semibold">0</span> représente son
-            absence. {% endif %}
+            absence.{% endif %}
           </p>
         </div>
 
@@ -663,18 +664,18 @@
             <thead>
               <tr>
                 <th>
-                  {% if lang == 'en' %}Pathology Target{% else %}Pathologie
+                  {% if lang == "en" %}Pathology Target{% else %}Pathologie
                   Cible{% endif %}
                 </th>
                 <th>
-                  {% if lang == 'en' %}itching{% else %}Démangeaisons{% endif %}
+                  {% if lang == "en" %}itching{% else %}Démangeaisons{% endif %}
                 </th>
                 <th>
-                  {% if lang == 'en' %}skin_rash{% else %}Éruption cutanée{%
+                  {% if lang == "en" %}skin_rash{% else %}Éruption cutanée{%
                   endif %}
                 </th>
                 <th>
-                  {% if lang == 'en' %}chills{% else %}Frissons froids{% endif
+                  {% if lang == "en" %}chills{% else %}Frissons froids{% endif
                   %}
                 </th>
               </tr>
@@ -682,7 +683,7 @@
             <tbody>
               <tr>
                 <td class="fw-bold text-start text-info">
-                  {% if lang == 'en' %}Fungal infection{% else %}Infection
+                  {% if lang == "en" %}Fungal infection{% else %}Infection
                   fongique{% endif %}
                 </td>
                 <td>1</td>
@@ -691,7 +692,7 @@
               </tr>
               <tr>
                 <td class="fw-bold text-start text-info">
-                  {% if lang == 'en' %}Allergy{% else %}Allergie{% endif %}
+                  {% if lang == "en" %}Allergy{% else %}Allergie{% endif %}
                 </td>
                 <td>0</td>
                 <td>1</td>
@@ -699,7 +700,7 @@
               </tr>
               <tr>
                 <td class="fw-bold text-start text-info">
-                  {% if lang == 'en' %}GERD{% else %}RGO{% endif %}
+                  {% if lang == "en" %}GERD{% else %}RGO{% endif %}
                 </td>
                 <td>0</td>
                 <td>0</td>
@@ -711,19 +712,19 @@
 
         <h6 class="fw-bold text-white mb-2">
           <i class="bi bi-check-circle-fill text-success me-2"></i>
-          {% if lang == 'en' %}Dataset Uniform Balance{% else %}Équilibre
+          {% if lang == "en" %}Dataset Uniform Balance{% else %}Équilibre
           Uniforme du Dataset{% endif %}
         </h6>
         <p class="small text-secondary mb-0" style="color: #94a3b8 !important">
-          {% if lang == 'en' %} The classifier is trained on a balanced database
+          {% if lang == "en" %}The classifier is trained on a balanced database
           of <strong>4,920 records</strong> with
           <strong>132 distinct symptoms</strong>. Classes have an exact uniform
           distribution, securing maximum mathematical stability for the decision
-          tree estimators. {% else %} Le classifieur est entraîné sur une base
-          de données équilibrée de <strong>4 920 enregistrements</strong> avec
+          tree estimators.{% else %}Le classifieur est entraîné sur une base de
+          données équilibrée de <strong>4 920 enregistrements</strong> avec
           <strong>132 symptômes distincts</strong>. Les classes possèdent une
           distribution uniforme exacte, assurant une stabilité mathématique
-          optimale pour les estimateurs de type arbre de décision. {% endif %}
+          optimale pour les estimateurs de type arbre de décision.{% endif %}
         </p>
       </div>
     </div>
@@ -772,6 +773,7 @@
         cold: "cold",
         chills: "chills",
         vomiting: "vomiting",
+        addict: "addict",
         rash: "rash",
         itching: "itching",
         skin: "skin",
@@ -814,7 +816,6 @@
         let filter = searchInput.value.toLowerCase().trim();
         const rawSearch = filter;
 
-        // Correspondance dynamique basée sur le dictionnaire
         if (translations[filter]) {
           filter = translations[filter];
         }
