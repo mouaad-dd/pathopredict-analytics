@@ -98,7 +98,7 @@
         color: #ffffff;
       }
       .search-medical::placeholder {
-        color: #94a3b8;
+        color: #cbd5e1;
       }
 
       .symptom-tag {
@@ -220,6 +220,13 @@
         border-bottom: 2px solid #3b82f6;
         transform: scale(1.1);
       }
+
+      /* CORRECTION FORCEE DU SPECTRUM SOMBRE DE L'APP */
+      .text-muted,
+      .text-secondary,
+      .text-light-50 {
+        color: #cbd5e1 !important;
+      }
     </style>
   </head>
   <body>
@@ -283,7 +290,7 @@
               <i class="bi bi-folder-fill"></i>
             </div>
             <div class="fw-bold text-white fs-4">41</div>
-            <div class="text-light opacity-75 small">
+            <div class="small" style="color: #94a3b8">
               {{ labels.kpi_patho }}
             </div>
           </div>
@@ -294,7 +301,9 @@
               <i class="bi bi-sliders"></i>
             </div>
             <div class="fw-bold text-white fs-4">132</div>
-            <div class="text-light opacity-75 small">{{ labels.kpi_vars }}</div>
+            <div class="small" style="color: #94a3b8">
+              {{ labels.kpi_vars }}
+            </div>
           </div>
         </div>
         <div class="col-6 col-md-3">
@@ -303,14 +312,14 @@
               <i class="bi bi-matrix-3x3"></i>
             </div>
             <div class="fw-bold text-white fs-4">4 920</div>
-            <div class="text-light opacity-75 small">{{ labels.kpi_obs }}</div>
+            <div class="small" style="color: #94a3b8">{{ labels.kpi_obs }}</div>
           </div>
         </div>
         <div class="col-6 col-md-3">
           <div class="metric-card shadow-sm">
             <div class="fs-3 mb-2" style="height: 36px"></div>
             <div class="fw-bold text-white fs-5">{{ labels.kpi_algo }}</div>
-            <div class="text-light opacity-75 small">
+            <div class="small" style="color: #94a3b8">
               {{ labels.kpi_engine }}
             </div>
           </div>
@@ -329,7 +338,7 @@
           >
             <i class="bi bi-bar-chart-fill me-1"></i> {{ labels.inf_title }}
           </span>
-          <span class="text-muted small fw-medium"
+          <span style="color: #94a3b8"
             >{{ labels.inf_session }}: #{{ request.user.id }}</span
           >
         </div>
@@ -337,7 +346,7 @@
         <div class="row g-5">
           <div class="col-md-6">
             <p
-              class="text-secondary mb-1 text-uppercase tracking-wider fw-bold small"
+              class="text-uppercase tracking-wider fw-bold small"
               style="color: #94a3b8 !important"
             >
               {{ labels.inf_class }}
@@ -363,10 +372,7 @@
               <h6 class="fw-bold text-white mb-2 fs-6">
                 {{ labels.inf_synth }}
               </h6>
-              <p
-                class="mb-0 lh-base fs-6 text-secondary"
-                style="color: #94a3b8 !important"
-              >
+              <p class="mb-0 lh-base fs-6" style="color: #cbd5e1 !important">
                 {{ description }}
               </p>
             </div>
@@ -377,7 +383,7 @@
             style="border-color: rgba(255, 255, 255, 0.1) !important"
           >
             <p
-              class="text-secondary mb-3 text-uppercase tracking-wider fw-bold small"
+              class="text-uppercase tracking-wider fw-bold small"
               style="color: #94a3b8 !important"
             >
               {{ labels.inf_risk }}
@@ -405,7 +411,7 @@
               style="border-color: rgba(255, 255, 255, 0.08) !important"
             >
               <p
-                class="text-secondary mb-3 text-uppercase tracking-wider fw-bold small"
+                class="text-uppercase tracking-wider fw-bold small"
                 style="color: #94a3b8 !important"
               >
                 {{ labels.inf_rec }}
@@ -424,8 +430,11 @@
           </div>
         </div>
         <p
-          class="text-muted mt-4 mb-0 fs-7 italic border-top pt-3"
-          style="border-color: rgba(255, 255, 255, 0.08) !important"
+          class="mt-4 mb-0 fs-7 italic border-top pt-3"
+          style="
+            border-color: rgba(255, 255, 255, 0.08) !important;
+            color: #94a3b8 !important;
+          "
         >
           {{ labels.inf_warning }}
         </p>
@@ -439,9 +448,7 @@
             <i class="bi bi-shield-plus me-2 text-primary"></i>{{
             labels.matrix_title }}
           </h3>
-          <p class="text-muted mb-0" style="color: #94a3b8 !important">
-            {{ labels.matrix_desc }}
-          </p>
+          <p style="color: #94a3b8 !important">{{ labels.matrix_desc }}</p>
         </div>
 
         {% if error_message %}
@@ -471,7 +478,7 @@
 
           <div class="mb-4" id="selectedContainer" style="display: none">
             <div
-              class="small fw-semibold text-secondary mb-2"
+              class="small fw-semibold mb-2"
               style="color: #94a3b8 !important"
             >
               {{ labels.active_params }}
@@ -572,14 +579,11 @@
             <i class="bi bi-info-circle text-info me-2"></i>{{ labels.off_struct
             }}
           </h6>
-          <p
-            class="small text-secondary mb-0"
-            style="color: #94a3b8 !important"
-          >
+          <p class="small" style="color: #94a3b8 !important">
             {{ labels.off_struct_desc }}
           </p>
         </div>
-        <div class="h-auto opacity-75 small border rounded p-3 text-muted">
+        <div class="h-auto small border rounded p-3" style="color: #cbd5e1">
           {{ labels.off_balance_desc }}
         </div>
       </div>
