@@ -25,7 +25,7 @@ NOM_FRANCAIS_MALADIES = {
     "Dimorphic hemmorhoids(piles)": "Hémorroïdes",
     "Heart attack": "Crise cardiaque",
     "Varicose veins": "Varices",
-    "Hypothyroidism": "Hypotte de poids, palpitations).",
+    "Hypothyroidism": "Hypothyroïdie",
     "Hyperthyroidism": "Hyperthyroïdie",
     "Hypoglycemia": "Hypoglycémie",
     "Osteoarthristis": "Arthrose (Ostéoarthrite)",
@@ -90,7 +90,7 @@ TRADUCTION_SYMPTOMES = {
     "depression": "Dépression", "irritability": "Irritabilité", "muscle_pain": "Douleurs musculaires", "altered_sensorium": "Altération de la conscience",
     "red_spots_over_body": "Taches rouges sur le corps", "belly_pain": "Maux de ventre", "abnormal_menstruation": "Règles anormales",
     "dischromic_patches": "Plaques décolorées", "watering_from_eyes": "Yeux larmoyants", "increased_appetite": "Augmentation de l'appétit",
-    "polyuria": "Miction excessive (Polyurie)", "family_history": "Antécédents familiaux", "mucoid_sputum": "Crachats muqueux",
+    "polyuria": "Miction excessive (Polyurie)", "family_history": "Antécédents patrimoniaux", "mucoid_sputum": "Crachats muqueux",
     "rusty_sputum": "Crachats rouillés", "lack_of_concentration": "Manque de concentration", "visual_disturbances": "Troubles visuels",
     "receiving_blood_transfusion": "Historique de transfusion sanguine", "receiving_unsterile_injections": "Injections non stériles",
     "coma": "Coma", "stomach_bleeding": "Saignement de l'estomac", "distention_of_abdomen": "Distension de l'abdomen",
@@ -397,7 +397,6 @@ def signup_view(request):
     return render(request, 'registration/signup.html', {'form': form})
 
 def intro_view(request):
-    # Gestion de la langue également sur la Landing Page
     lang = request.GET.get('lang', request.session.get('lang', 'fr'))
     request.session['lang'] = lang
     

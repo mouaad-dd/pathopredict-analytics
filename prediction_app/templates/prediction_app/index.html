@@ -100,6 +100,8 @@
       .search-medical::placeholder {
         color: #94a3b8;
       }
+
+      /* FIX DESIGN: Tronquer proprement les longs symptômes */
       .symptom-tag {
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 16px;
@@ -107,6 +109,10 @@
         padding: 16px 20px;
         transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
       }
       .symptom-tag:hover {
         border-color: #3b82f6;
@@ -114,12 +120,20 @@
         transform: scale(1.02);
         box-shadow: 0 0 10px rgba(59, 130, 246, 0.15);
       }
+      .form-check-label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        width: 100%;
+      }
       .form-check-input {
         width: 1.35em;
         height: 1.35em;
         border: 2px solid rgba(255, 255, 255, 0.2);
         background-color: rgba(15, 23, 42, 0.6);
         cursor: pointer;
+        flex-shrink: 0; /* Évite que la checkbox se déforme */
       }
       .form-check-input:checked {
         background-color: #3b82f6;
@@ -485,7 +499,10 @@
           >
             {% for symp in liste_symptomes %}
             <div class="col symptom-col" style="display: none">
-              <div class="form-check symptom-tag d-flex align-items-center m-0">
+              <div
+                class="form-check symptom-tag d-flex align-items-center m-0"
+                title="{{ symp.nom_affichage }}"
+              >
                 <input
                   class="form-check-input ms-1 me-3"
                   type="checkbox"
