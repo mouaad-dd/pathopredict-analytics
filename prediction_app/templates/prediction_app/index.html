@@ -1,9 +1,13 @@
 <!doctype html>
-<html lang="fr">
+<html lang="{% if lang == 'en' %}en{% else %}fr{% endif %}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PathoPredict Analytics — Plateforme d'Inférence Algorithmique</title>
+    <title>
+      {% if lang == 'en' %}PathoPredict Analytics — Algorithmic Inference
+      Platform{% else %}PathoPredict Analytics — Plateforme d'Inférence
+      Algorithmique{% endif %}
+    </title>
     <!-- Premium Typography Inter & Bootstrap Icons -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -211,6 +215,26 @@
         border: 1px solid rgba(59, 130, 246, 0.25);
         color: #93c5fd;
       }
+
+      /* Language Selectors */
+      .lang-btn {
+        opacity: 0.6;
+        transition:
+          opacity 0.2s ease,
+          transform 0.2s ease;
+        font-size: 1.4rem;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .lang-btn:hover {
+        opacity: 1;
+        transform: scale(1.15);
+      }
+      .lang-active {
+        opacity: 1;
+        border-bottom: 2px solid #3b82f6;
+        transform: scale(1.1);
+      }
     </style>
   </head>
   <body>
@@ -225,7 +249,26 @@
             Patho<span>Predict Analytics</span>
           </a>
         </div>
+
         <div class="d-flex align-items-center gap-3">
+          <!-- Multi-language Flags Switcher -->
+          <div class="d-flex align-items-center gap-2 me-2">
+            <a
+              href="?lang=fr"
+              class="lang-btn {% if lang == 'fr' or not lang %}lang-active{% endif %}"
+              title="Français"
+            >
+              🇫🇷
+            </a>
+            <a
+              href="?lang=en"
+              class="lang-btn {% if lang == 'en' %}lang-active{% endif %}"
+              title="English"
+            >
+              🇬🇧
+            </a>
+          </div>
+
           <button
             type="button"
             class="btn btn-sm btn-outline-light rounded-pill px-3 fw-medium"
@@ -233,9 +276,11 @@
             data-bs-toggle="offcanvas"
             data-bs-target="#datasetMetadata"
           >
-            <i class="bi bi-folder-symlink-fill text-info me-1"></i> Base
-            d'Entraînement
+            <i class="bi bi-folder-symlink-fill text-info me-1"></i>
+            {% if lang == 'en' %}Training Dataset{% else %}Base d'Entraînement{%
+            endif %}
           </button>
+
           <form action="{% url 'logout' %}" method="post" class="m-0">
             {% csrf_token %}
             <button
@@ -243,7 +288,7 @@
               class="btn btn-outline-danger btn-sm px-4 rounded-pill fw-medium"
               style="border-color: rgba(239, 68, 68, 0.3)"
             >
-              Se déconnecter
+              {% if lang == 'en' %}Sign Out{% else %}Se déconnecter{% endif %}
             </button>
           </form>
         </div>
@@ -260,7 +305,8 @@
             </div>
             <div class="fw-bold text-white fs-4">41</div>
             <div class="text-light opacity-75 small">
-              Pathologies Classifiées
+              {% if lang == 'en' %}Classified Pathologies{% else %}Pathologies
+              Classifiées{% endif %}
             </div>
           </div>
         </div>
@@ -271,7 +317,8 @@
             </div>
             <div class="fw-bold text-white fs-4">132</div>
             <div class="text-light opacity-75 small">
-              Variables Explicatives
+              {% if lang == 'en' %}Explanatory Variables{% else %}Variables
+              Explicatives{% endif %}
             </div>
           </div>
         </div>
@@ -280,17 +327,24 @@
             <div class="text-warning fs-3 mb-2">
               <i class="bi bi-matrix-3x3"></i>
             </div>
-            <div class="fw-bold text-white fs-4">4 920</div>
+            <div class="fw-bold text-white fs-4">4,920</div>
             <div class="text-light opacity-75 small">
-              Observations Échantillonnées
+              {% if lang == 'en' %}Sampled Observations{% else %}Observations
+              Échantillonnées{% endif %}
             </div>
           </div>
         </div>
         <div class="col-6 col-md-3">
           <div class="metric-card shadow-sm">
             <div class="fs-3 mb-2" style="height: 36px"></div>
-            <div class="fw-bold text-white fs-5">Algorithme d'Ensemble</div>
-            <div class="text-light opacity-75 small">Moteur d'Inférence</div>
+            <div class="fw-bold text-white fs-5">
+              {% if lang == 'en' %}Ensemble Algorithm{% else %}Algorithme
+              d'Ensemble{% endif %}
+            </div>
+            <div class="text-light opacity-75 small">
+              {% if lang == 'en' %}Inference Engine{% else %}Moteur
+              d'Inférence{% endif %}
+            </div>
           </div>
         </div>
       </div>
@@ -305,11 +359,13 @@
             class="badge bg-info bg-opacity-10 text-info px-3 py-2 rounded-pill fw-semibold fs-7"
             style="border: 1px solid rgba(6, 182, 212, 0.2)"
           >
-            <i class="bi bi-bar-chart-fill me-1"></i> Résultat de l'Inférence
-            Algorithmique
+            <i class="bi bi-bar-chart-fill me-1"></i>
+            {% if lang == 'en' %}Algorithmic Inference Result{% else %}Résultat
+            de l'Inférence Algorithmique{% endif %}
           </span>
           <span class="text-muted small fw-medium"
-            >Session Utilisateur: #{{ request.user.id }}</span
+            >{% if lang == 'en' %}User Session{% else %}Session Utilisateur{%
+            endif %}: #{{ request.user.id }}</span
           >
         </div>
 
@@ -320,7 +376,8 @@
               class="text-secondary mb-1 text-uppercase tracking-wider fw-bold small"
               style="color: #94a3b8 !important"
             >
-              Classe Principale Estimée :
+              {% if lang == 'en' %}Estimated Primary Class :{% else %}Classe
+              Principale Estimée :{% endif %}
             </p>
             <h2 class="fw-bold mb-4 text-white" style="letter-spacing: -0.02em">
               {{ resultat }}
@@ -331,7 +388,8 @@
             >
               <i class="bi bi-graph-up-arrow fs-5 text-info"></i>
               <span class="fw-bold">
-                Indice de confiance du modèle : {{ confiance_principale }}%
+                {% if lang == 'en' %}Model Confidence Score{% else %}Indice de
+                confiance du modèle{% endif %} : {{ confiance_principale }}%
               </span>
             </div>
 
@@ -343,7 +401,8 @@
               "
             >
               <h6 class="fw-bold text-white mb-2 fs-6">
-                📌 Synthèse de la description clinique
+                {% if lang == 'en' %}📌 Clinical Description Synthesis{% else
+                %}📌 Synthèse de la description clinique{% endif %}
               </h6>
               <p
                 class="mb-0 lh-base fs-6 text-secondary"
@@ -363,7 +422,8 @@
               class="text-secondary mb-3 text-uppercase tracking-wider fw-bold small"
               style="color: #94a3b8 !important"
             >
-              Spectre de distribution des risques (Top 3) :
+              {% if lang == 'en' %}Distribution Risk Spectrum (Top 3) :{% else
+              %}Spectre de distribution des risques (Top 3) :{% endif %}
             </p>
 
             {% for pred in top_predictions %}
@@ -393,7 +453,8 @@
                 class="text-secondary mb-3 text-uppercase tracking-wider fw-bold small"
                 style="color: #94a3b8 !important"
               >
-                🔬 Conseils & actions de première urgence :
+                {% if lang == 'en' %}🔬 Recommended Steps for Recovery :{% else
+                %}🔬 Conseils & actions de première urgence :{% endif %}
               </p>
               <ul class="list-unstyled d-flex flex-column gap-2 m-0">
                 {% for step in recommendations %}
@@ -412,9 +473,12 @@
           class="text-muted mt-4 mb-0 fs-7 italic border-top pt-3"
           style="border-color: rgba(255, 255, 255, 0.08) !important"
         >
-          ⚠️ Cette prédiction automatisée est basée sur des algorithmes de
-          corrélation statistique. Elle ne se substitue en aucun cas à une
-          évaluation médicale clinique.
+          {% if lang == 'en' %} ⚠️ This automated prediction is based on
+          statistical correlation algorithms. It is not a substitute for
+          clinical medical evaluation. {% else %} ⚠️ Cette prédiction
+          automatisée est basée sur des algorithmes de corrélation statistique.
+          Elle ne se substitue en aucun cas à une évaluation médicale clinique.
+          {% endif %}
         </p>
       </div>
       {% endif %}
@@ -423,12 +487,15 @@
       <div class="card card-premium p-4 p-md-5 mb-5">
         <div class="mb-4">
           <h3 class="fw-bold text-white tracking-tight mb-2">
-            <i class="bi bi-shield-plus me-2 text-primary"></i>Matrice de
-            Configuration Clinique
+            <i class="bi bi-shield-plus me-2 text-primary"></i>
+            {% if lang == 'en' %}Clinical Configuration Matrix{% else %}Matrice
+            de Configuration Clinique{% endif %}
           </h3>
           <p class="text-muted mb-0" style="color: #94a3b8 !important">
+            {% if lang == 'en' %} Select and combine observed parameters to
+            submit the feature vector to the predictive model. {% else %}
             Sélectionnez et combinez les paramètres observés pour soumettre le
-            vecteur de caractéristiques au modèle prédictif.
+            vecteur de caractéristiques au modèle prédictif. {% endif %}
           </p>
         </div>
 
@@ -454,7 +521,7 @@
               type="text"
               id="searchSymptom"
               class="form-control search-medical shadow-sm"
-              placeholder="🔍 Filtrer les symptômes cliniques (ex : douleur, fièvre, toux)..."
+              placeholder="{% if lang == 'en' %}🔍 Filter clinical symptoms (e.g., pain, fever, cough)...{% else %}🔍 Filtrer les symptômes cliniques (ex : douleur, fièvre, toux)...{% endif %}"
             />
           </div>
 
@@ -463,7 +530,9 @@
               class="small fw-semibold text-secondary mb-2"
               style="color: #94a3b8 !important"
             >
-              Paramètres actifs pour l'analyse statistique :
+              {% if lang == 'en' %}Active parameters for statistical analysis
+              :{% else %}Paramètres actifs pour l'analyse statistique :{% endif
+              %}
             </div>
             <div class="d-flex flex-wrap gap-2" id="badgeZone"></div>
           </div>
@@ -477,7 +546,8 @@
               style="color: #94a3b8"
               id="gridTitle"
             >
-              Index des Paramètres du Modèle
+              {% if lang == 'en' %}Model Parameters Index{% else %}Index des
+              Paramètres du Modèle{% endif %}
             </h6>
           </div>
 
@@ -519,7 +589,8 @@
             style="border-color: rgba(255, 255, 255, 0.08) !important"
           >
             <button type="submit" class="btn btn-analyse shadow-sm">
-              Exécuter l'Analyse Statistique
+              {% if lang == 'en' %}Execute Statistical Analysis{% else
+              %}Exécuter l'Analyse Statistique{% endif %}
             </button>
           </div>
         </form>
@@ -538,8 +609,11 @@
         style="border-color: rgba(255, 255, 255, 0.08)"
       >
         <h5 class="offcanvas-title fw-bold text-white">
+          {% if lang == 'en' %}
+          <i class="bi bi-database-fill text-info me-2"></i>Source Dataset
+          Matrix {% else %}
           <i class="bi bi-database-fill text-info me-2"></i>Matrice de la Source
-          de Données
+          de Données {% endif %}
         </h5>
         <button
           type="button"
@@ -556,19 +630,25 @@
           "
         >
           <h6 class="fw-bold text-white mb-2 fs-6">
-            <i class="bi bi-info-circle text-info me-2"></i>Structure des
-            Variables
+            <i class="bi bi-info-circle text-info me-2"></i>
+            {% if lang == 'en' %}Variable Structure{% else %}Structure des
+            Variables{% endif %}
           </h6>
           <p
             class="small text-secondary mb-0"
             style="color: #94a3b8 !important"
           >
-            Chaque colonne représente un
+            {% if lang == 'en' %} Each column represents a
+            <strong>unique clinical symptom</strong> binarized in the dataset:
+            <span class="text-white fw-semibold">1</span> indicates symptom
+            presence, and
+            <span class="text-white fw-semibold">0</span> represents its
+            absence. {% else %} Chaque colonne représente un
             <strong>symptôme clinique unique</strong> binarisé dans le jeu de
             données : <span class="text-white fw-semibold">1</span> indique la
             présence du symptôme, et
             <span class="text-white fw-semibold">0</span> représente son
-            absence.
+            absence. {% endif %}
           </p>
         </div>
 
@@ -582,27 +662,45 @@
           >
             <thead>
               <tr>
-                <th>Pathologie Cible</th>
-                <th>Démangeaisons</th>
-                <th>Éruption cutanée</th>
-                <th>Frissons froids</th>
+                <th>
+                  {% if lang == 'en' %}Pathology Target{% else %}Pathologie
+                  Cible{% endif %}
+                </th>
+                <th>
+                  {% if lang == 'en' %}itching{% else %}Démangeaisons{% endif %}
+                </th>
+                <th>
+                  {% if lang == 'en' %}skin_rash{% else %}Éruption cutanée{%
+                  endif %}
+                </th>
+                <th>
+                  {% if lang == 'en' %}chills{% else %}Frissons froids{% endif
+                  %}
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="fw-bold text-start text-info">Infection fongique</td>
+                <td class="fw-bold text-start text-info">
+                  {% if lang == 'en' %}Fungal infection{% else %}Infection
+                  fongique{% endif %}
+                </td>
                 <td>1</td>
                 <td>1</td>
                 <td>0</td>
               </tr>
               <tr>
-                <td class="fw-bold text-start text-info">Allergie</td>
+                <td class="fw-bold text-start text-info">
+                  {% if lang == 'en' %}Allergy{% else %}Allergie{% endif %}
+                </td>
                 <td>0</td>
                 <td>1</td>
                 <td>0</td>
               </tr>
               <tr>
-                <td class="fw-bold text-start text-info">RGO</td>
+                <td class="fw-bold text-start text-info">
+                  {% if lang == 'en' %}GERD{% else %}RGO{% endif %}
+                </td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
@@ -612,21 +710,25 @@
         </div>
 
         <h6 class="fw-bold text-white mb-2">
-          <i class="bi bi-check-circle-fill text-success me-2"></i>Équilibre
-          Uniforme du Dataset
+          <i class="bi bi-check-circle-fill text-success me-2"></i>
+          {% if lang == 'en' %}Dataset Uniform Balance{% else %}Équilibre
+          Uniforme du Dataset{% endif %}
         </h6>
         <p class="small text-secondary mb-0" style="color: #94a3b8 !important">
-          Le classifieur est entraîné sur une base de données équilibrée de
-          <strong>4 920 enregistrements</strong> avec
+          {% if lang == 'en' %} The classifier is trained on a balanced database
+          of <strong>4,920 records</strong> with
+          <strong>132 distinct symptoms</strong>. Classes have an exact uniform
+          distribution, securing maximum mathematical stability for the decision
+          tree estimators. {% else %} Le classifieur est entraîné sur une base
+          de données équilibrée de <strong>4 920 enregistrements</strong> avec
           <strong>132 symptômes distincts</strong>. Les classes possèdent une
           distribution uniforme exacte, assurant une stabilité mathématique
-          optimale pour les estimateurs de type arbre de décision.
+          optimale pour les estimateurs de type arbre de décision. {% endif %}
         </p>
       </div>
     </div>
 
     <!-- Scripts with Multilingual Dictionary translation support -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       const searchInput = document.getElementById("searchSymptom");
@@ -635,8 +737,9 @@
       const selectedContainer = document.getElementById("selectedContainer");
       const gridTitle = document.getElementById("gridTitle");
 
-      // Dictionnaire étendu pour lier les recherches en français aux termes du dictionnaire
+      // Dictionnaire étendu pour lier les recherches en français ET anglais
       const translations = {
+        // FR keywords
         douleur: "douleur",
         mal: "douleur",
         fievre: "fièvre",
@@ -662,6 +765,20 @@
         estomac: "estomac",
         tete: "tête",
         tête: "tête",
+        // EN keywords
+        pain: "pain",
+        fever: "fever",
+        cough: "cough",
+        cold: "cold",
+        chills: "chills",
+        vomiting: "vomiting",
+        rash: "rash",
+        itching: "itching",
+        skin: "skin",
+        yellow: "yellow",
+        abdominal: "abdominal",
+        stomach: "stomach",
+        headache: "headache",
       };
 
       function updateBadges() {
@@ -697,15 +814,19 @@
         let filter = searchInput.value.toLowerCase().trim();
         const rawSearch = filter;
 
-        // Correspondance dynamique basée sur le dictionnaire français
+        // Correspondance dynamique basée sur le dictionnaire
         if (translations[filter]) {
           filter = translations[filter];
         }
 
         const isSearching = rawSearch !== "";
-        gridTitle.textContent = isSearching
-          ? "Résultats de la Recherche"
-          : "Index des Paramètres du Modèle";
+
+        // Titre de recherche bilingue
+        const emptyTitle =
+          "{% if lang == 'en' %}Model Parameters Index{% else %}Index des Paramètres du Modèle{% endif %}";
+        const matchTitle =
+          "{% if lang == 'en' %}Search Results Matches{% else %}Résultats de la Recherche{% endif %}";
+        gridTitle.textContent = isSearching ? matchTitle : emptyTitle;
 
         cols.forEach((col) => {
           const label = col.querySelector(".form-check-label");
@@ -713,8 +834,6 @@
           if (label) {
             const text = label.textContent.toLowerCase();
 
-            // Règle d'affichage : On affiche si on cherche ET que ça match,
-            // OU si la case est cochée, OU si on ne cherche rien du tout (on affiche tout l'index)
             if (!isSearching) {
               col.style.display = "";
             } else if (text.includes(filter) || text.includes(rawSearch)) {
@@ -753,4 +872,3 @@
     </script>
   </body>
 </html>
-<!-- Scripts avec support de filtrage corrigé -->
