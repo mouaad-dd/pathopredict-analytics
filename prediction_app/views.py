@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.views import LoginView
 import joblib
 import numpy as np
 import pandas as pd
@@ -90,7 +91,7 @@ TRADUCTION_SYMPTOMES = {
     "depression": "Dépression", "irritability": "Irritabilité", "muscle_pain": "Douleurs musculaires", "altered_sensorium": "Altération de la conscience",
     "red_spots_over_body": "Taches rouges sur le corps", "belly_pain": "Maux de ventre", "abnormal_menstruation": "Règles anormales",
     "dischromic_patches": "Plaques décolorées", "watering_from_eyes": "Yeux larmoyants", "increased_appetite": "Augmentation de l'appétit",
-    "polyuria": "Miction excessive (Polyurie)", "family_history": "Antécédents patrimoniaux", "mucoid_sputum": "Crachats muqueux",
+    "polyuria": "Miction excessive (Polyurie)", "family_history": "Antécédents familiaux", "mucoid_sputum": "Crachats muqueux",
     "rusty_sputum": "Crachats rouillés", "lack_of_concentration": "Manque de concentration", "visual_disturbances": "Troubles visuels",
     "receiving_blood_transfusion": "Historique de transfusion sanguine", "receiving_unsterile_injections": "Injections non stériles",
     "coma": "Coma", "stomach_bleeding": "Saignement de l'estomac", "distention_of_abdomen": "Distension de l'abdomen",
@@ -113,7 +114,7 @@ DESCRIPTIONS_MALADIES_FR = {
     "Common Cold": "Une infection virale hautement contagieuse des voies respiratoires supérieures, entraînant un écoulement nasal, des éternuements et des maux de gorge.",
     "Pneumonia": "Une infection aiguë d'un ou des deux poumons, généralement bactérienne ou virale, provoquant une toux persistante, de la fièvre et des difficultés respiratoires.",
     "Dimorphic hemmorhoids(piles)": "Veines gonflées et douloureuses dans l'anus et le rectum inférieur, pouvant provoquer des saignements mineurs ou des douleurs lors de la défécation.",
-    "Heart attack": "Une urgence médicale causée par l'interruption du flux sanguin vers le muscle cardiaque, provoquant une vive douleur thoracique irradiant vers le bras ou la mâchoire.",
+    "Heart attack": "Une urgence médicale causée par l'interruption du flux sanguin vers le muscle grandiose cardiaque, provoquant une vive douleur thoracique irradiant vers le bras ou la mâchoire.",
     "Varicose veins": "Veines dilatées et tortueuses, apparaissant le plus souvent sur les jambes, dues à une faiblesse des parois veineuses.",
     "Hypothyroidism": "Insuffisance d'activité de la glande thyroïde, ralentissant le métabolisme et entraînant fatigue, prise de poids et sensibilité au froid.",
     "Hyperthyroidism": "Hyperactivité de la glande thyroïde entraînant une production excessive d'hormones, accélérant le métabolisme (perte de poids, palpitations).",
@@ -213,7 +214,7 @@ RECOMMENDATIONS_MALADIES_FR = {
     "Urinary tract infection": ["Buvez d'importantes quantités d'eau.", "Consultez rapidement pour des antibiotiques.", "Évitez l'alcool, le café et le sucre.", "Urinez dès que l'envie se fait sentir."],
     "Psoriasis": ["Hydratez généreusement votre peau au quotidien.", "Évitez l'exposition prolongée au froid sec.", "Suivez scrupuleusement votre traitement prescrit.", "Gérez votre stress, puissant déclencheur."],
     "Impetigo": ["Consultez pour un traitement antibiotique local.", "Nettoyez à l'eau tiède pour retirer les croûtes.", "Couvrez les lésions d'une compresse stérile.", "Gardez des ongles courts et propres."],
-    "Gastroenteritis": ["Privilégiez la réhydratation par petites gorgées.", "Reprenez une alimentation légère (riz, banane).", "Évitez les produits laitiers et les graisses.", "Lavez-vous minutieusement les mains au savon."],
+    "Gastroenteritis": ["Privilégiez la réhydratation par petites gorgées.", "Reprenez une alimentation légère (rice, banane).", "Évitez les produits laitiers et les graisses.", "Lavez-vous minutieusement les mains au savon."],
     "Bronchial Asthma": ["Gardez en permanence votre inhalateur de secours.", "Limitez les facteurs déclencheurs (poussière, tabac).", "Prenez régulièrement votre traitement de fond.", "Appelez les urgences si la crise persiste."],
     "Hypertension": ["Adoptez une alimentation pauvre en sel.", "Pratiquez 30 minutes de marche par jour.", "Mesurez régulièrement votre tension artérielle.", "Prenez vos traitements tous les jours."],
     "Migraine": ["Allongez-vous dans une pièce sombre et silencieuse.", "Appliquez une compresse froide sur vos tempes.", "Buvez de l'eau et évitez les repas lourds.", "Prenez votre traitement spécifique dès le début."],
@@ -374,7 +375,7 @@ def index(request):
         'liste_symptomes': liste_symptomes_traduits,
         'resultat': resultat,
         'description': description,
-        'symptomes_coches': symptomes_coches_affichage,
+        'symptomes_coches':             symptomes_coches_affichage,
         'symptomes_valeurs_brutes': symptomes_coches,
         'top_predictions': top_predictions,
         'confiance_principale': confiance_principale,
@@ -384,17 +385,6 @@ def index(request):
         'labels': labels,
     }
     return render(request, 'prediction_app/index.html', context)
-
-def signup_view(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect('index')
-    else:
-        form = UserCreationForm()
-    return render(request, 'registration/signup.html', {'form': form})
 
 def intro_view(request):
     lang = request.GET.get('lang', request.session.get('lang', 'fr'))
@@ -419,3 +409,51 @@ def intro_view(request):
         }
         
     return render(request, 'prediction_app/intro.html', {'lang': lang, 'labels': labels})
+
+# VUE DE CONNEXION PERSONNALISÉE ET BILINGUE
+class CustomLoginView(LoginView):
+    template_name = 'registration/login.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        lang = self.request.GET.get('lang', self.request.session.get('lang', 'fr'))
+        self.request.session['lang'] = lang
+        
+        if lang == 'en':
+            context['labels'] = {
+                "title": "Login to PathoPredict", "user": "Username", "pass": "Password",
+                "btn": "Sign In", "no_account": "Don't have an account yet?", "register": "Sign up"
+            }
+        else:
+            context['labels'] = {
+                "title": "Connexion à PathoPredict", "user": "Nom d'utilisateur", "pass": "Mot de passe",
+                "btn": "Se connecter", "no_account": "Pas encore de compte ?", "register": "S'inscrire"
+            }
+        context['lang'] = lang
+        return context
+
+def signup_view(request):
+    lang = request.GET.get('lang', request.session.get('lang', 'fr'))
+    request.session['lang'] = lang
+    
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('index')
+    else:
+        form = UserCreationForm()
+        
+    if lang == 'en':
+        labels = {
+            "title": "Join PathoPredict", "btn": "Create Account",
+            "already": "Already registered?", "login": "Sign In"
+        }
+    else:
+        labels = {
+            "title": "Rejoindre PathoPredict", "btn": "Créer mon compte",
+            "already": "Déjà inscrit ?", "login": "Se connecter"
+        }
+        
+    return render(request, 'registration/signup.html', {'form': form, 'lang': lang, 'labels': labels})

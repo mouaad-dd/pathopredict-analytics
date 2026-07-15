@@ -101,7 +101,7 @@
         color: #94a3b8;
       }
 
-      /* FIX DESIGN: Tronquer proprement les longs symptômes */
+      /* FIX DESIGN OPTIMISÉ POUR LES LONGUES OPTION DE CHOIX */
       .symptom-tag {
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 16px;
@@ -133,7 +133,7 @@
         border: 2px solid rgba(255, 255, 255, 0.2);
         background-color: rgba(15, 23, 42, 0.6);
         cursor: pointer;
-        flex-shrink: 0; /* Évite que la checkbox se déforme */
+        flex-shrink: 0;
       }
       .form-check-input:checked {
         background-color: #3b82f6;
@@ -499,6 +499,7 @@
           >
             {% for symp in liste_symptomes %}
             <div class="col symptom-col" style="display: none">
+              <!-- L'attribut title permet de voir l'intégralité du texte au survol de la souris -->
               <div
                 class="form-check symptom-tag d-flex align-items-center m-0"
                 title="{{ symp.nom_affichage }}"
