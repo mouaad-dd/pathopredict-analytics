@@ -25,7 +25,7 @@ NOM_FRANCAIS_MALADIES = {
     "Dimorphic hemmorhoids(piles)": "Hémorroïdes",
     "Heart attack": "Crise cardiaque",
     "Varicose veins": "Varices",
-    "Hypothyroidism": "Hypothyroïdie",
+    "Hypothyroidism": "Hypotte de poids, palpitations).",
     "Hyperthyroidism": "Hyperthyroïdie",
     "Hypoglycemia": "Hypoglycémie",
     "Osteoarthristis": "Arthrose (Ostéoarthrite)",
@@ -107,7 +107,7 @@ DESCRIPTIONS_MALADIES_FR = {
     "Malaria": "Une infection parasitaire transmise par les moustiques, entraînant de fortes fièvres, des frissons, des maux de tête et une transpiration intense.",
     "Allergy": "Une réaction exagérée du système immunitaire à une substance étrangère (poussière, pollen, aliments), provoquant éternuements, démangeaisons ou rougeurs.",
     "Diabetes": "Un trouble métabolique chronique caractérisé par un taux de sucre élevé dans le sang, résultant d'une production insuffisante d'insuline.",
-    "Dengue": "Une infection virale transmise par les moustiques, provoquant une forte fièvre, d'intenses douleurs articulaires et musculaires et des éruptions cutanées.",
+    "Dengue": "Une infection virale transmise par les moustiques, provoquant une forte fièvre, d'intenses douleurs musculaires et des éruptions cutanées.",
     "Typhoid": "Une infection bactérienne grave contractée par l'ingestion d'eau ou d'aliments contaminés, provoquant une fièvre continue et des douleurs abdominales.",
     "Fungal infection": "Une infection cutanée ou unguéale localisée causée par des champignons microscopiques, entraînant démangeaisons, rougeurs et desquamation.",
     "Common Cold": "Une infection virale hautement contagieuse des voies respiratoires supérieures, entraînant un écoulement nasal, des éternuements et des maux de gorge.",
@@ -140,7 +140,7 @@ DESCRIPTIONS_MALADIES_FR = {
     "Hepatitis A": "Une maladie hépatique virale aiguë transmise par de l'eau ou des aliments contaminés, entraînant fatigue, nausées et perte d'appétit.",
     "Hepatitis B": "Infection hépatique virale transmise par le sang ou les fluides corporels, pouvant entraîner des lésions hépatiques chroniques.",
     "Hepatitis C": "Infection virale du foie transmise par le sang, évoluant fréquemment vers une inflammation chronique silencieuse.",
-    "Hepatitis D": "Maladie hépatique grave survenant uniquement chez les personnes déjà infected par l'hépatite B, accélérant les complications.",
+    "Hepatitis D": "Maladie hépatique grave survenant uniquement chez les personnes déjà infectées par l'hépatite B, accélérant les complications.",
     "Hepatitis E": "Infection hépatique virale principalement transmise par de l'eau de boisson contaminée, généralement bénigne mais dangereuse pour les femmes enceintes.",
     "Alcoholic hepatitis": "Inflammation aiguë ou chronique du foie causée par une consommation excessive et prolongée d'alcool.",
     "Tuberculosis": "Une infection bactérienne hautement contagieuse attaquant principalement les poumons, caractérisée par une toux persistante et des sueurs nocturnes."
@@ -170,7 +170,7 @@ DESCRIPTIONS_MALADIES_EN = {
     "Psoriasis": "A chronic autoimmune skin disease that speeds up the life cycle of skin cells, causing thick, red patches covered with silvery scales.",
     "Impetigo": "A highly contagious bacterial skin infection, common in children, characterized by red sores that break open and form honey-colored crusts.",
     "Gastroenteritis": "Inflammation of the stomach and intestines due to infection, leading to diarrhea, vomiting, and abdominal cramps.",
-    "Bronchial Asthma": "A chronic disease causing inflammation and narrowing of the airways, resulting in whezing, shortness of breath, and coughing.",
+    "Bronchial Asthma": "A chronic disease causing inflammation and narrowing of the airways, resulting in wheezing, shortness of breath, and coughing.",
     "Hypertension": "Chronically elevated blood pressure in the arteries, increasing the heart's workload over time without immediate warning symptoms.",
     "Migraine": "An intense, throbbing headache, typically affecting one side of the head, often accompanied by nausea and extreme sensitivity to light.",
     "Cervical spondylosis": "Age-related wear and tear affecting the spinal discs in the neck, leading to persistent neck pain and stiffness.",
@@ -187,7 +187,6 @@ DESCRIPTIONS_MALADIES_EN = {
     "Hepatitis D": "A serious liver disease occurring only in people who are already infected with Hepatitis B, leading to accelerated liver complications.",
     "Hepatitis E": "A viral liver infection mainly transmitted through contaminated drinking water, usually self-limiting but dangerous to vulnerable profiles.",
     "Alcoholic hepatitis": "Acute or chronic liver inflammation caused by heavy, long-term toxic consumption of alcohol.",
-    "Dark urine": "A highly contagious bacterial infection primarily attacking the lungs, characterized by persistent coughing, chest pain, and night sweats.",
     "Tuberculosis": "A highly contagious bacterial infection primarily attacking the lungs, characterized by persistent coughing, chest pain, and night sweats."
 }
 
@@ -214,7 +213,7 @@ RECOMMENDATIONS_MALADIES_FR = {
     "Urinary tract infection": ["Buvez d'importantes quantités d'eau.", "Consultez rapidement pour des antibiotiques.", "Évitez l'alcool, le café et le sucre.", "Urinez dès que l'envie se fait sentir."],
     "Psoriasis": ["Hydratez généreusement votre peau au quotidien.", "Évitez l'exposition prolongée au froid sec.", "Suivez scrupuleusement votre traitement prescrit.", "Gérez votre stress, puissant déclencheur."],
     "Impetigo": ["Consultez pour un traitement antibiotique local.", "Nettoyez à l'eau tiède pour retirer les croûtes.", "Couvrez les lésions d'une compresse stérile.", "Gardez des ongles courts et propres."],
-    "Gastroenteritis": ["Privilégiez la réhydratation par petites gorgées.", "Reprenez une alimentation fade (riz, banane).", "Évitez les produits laitiers et les graisses.", "Lavez-vous minutieusement les mains au savon."],
+    "Gastroenteritis": ["Privilégiez la réhydratation par petites gorgées.", "Reprenez une alimentation légère (riz, banane).", "Évitez les produits laitiers et les graisses.", "Lavez-vous minutieusement les mains au savon."],
     "Bronchial Asthma": ["Gardez en permanence votre inhalateur de secours.", "Limitez les facteurs déclencheurs (poussière, tabac).", "Prenez régulièrement votre traitement de fond.", "Appelez les urgences si la crise persiste."],
     "Hypertension": ["Adoptez une alimentation pauvre en sel.", "Pratiquez 30 minutes de marche par jour.", "Mesurez régulièrement votre tension artérielle.", "Prenez vos traitements tous les jours."],
     "Migraine": ["Allongez-vous dans une pièce sombre et silencieuse.", "Appliquez une compresse froide sur vos tempes.", "Buvez de l'eau et évitez les repas lourds.", "Prenez votre traitement spécifique dès le début."],
@@ -398,6 +397,26 @@ def signup_view(request):
     return render(request, 'registration/signup.html', {'form': form})
 
 def intro_view(request):
+    # Gestion de la langue également sur la Landing Page
+    lang = request.GET.get('lang', request.session.get('lang', 'fr'))
+    request.session['lang'] = lang
+    
     if request.user.is_authenticated:
         return redirect('index')
-    return render(request, 'prediction_app/intro.html')
+        
+    if lang == 'en':
+        labels = {
+            "welcome": "Welcome to PathoPredict Analytics",
+            "subtitle": "Advanced Diagnostic Platform Powered by Ensemble Learning Methods",
+            "btn_enter": "Access Platform Dashboard",
+            "footer": "National Institute of Statistics and Applied Economics — Biostatistics & Big Data Track"
+        }
+    else:
+        labels = {
+            "welcome": "Bienvenue sur PathoPredict Analytics",
+            "subtitle": "Plateforme de Diagnostic Avancé Basée sur les Méthodes d'Apprentissage d'Ensemble",
+            "btn_enter": "Accéder au Tableau de Bord",
+            "footer": "Institut National de Statistique et d'Économie Appliquée — Filière Biostatistique & Big Data"
+        }
+        
+    return render(request, 'prediction_app/intro.html', {'lang': lang, 'labels': labels})
