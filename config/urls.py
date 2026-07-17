@@ -29,7 +29,7 @@ urlpatterns = [
     path('analytics/', prediction_views.index, name='index'),
     
     # 3. Authentification (Connexion, Inscription et Déconnexion)
-    path('login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
+    path('login/', prediction_views.CustomLoginView.as_view(template_name='prediction_app/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('signup/', prediction_views.signup_view, name='signup'),
 ]
