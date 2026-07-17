@@ -21,6 +21,7 @@ Follow these steps to run this project locally on your machine:
 ### 1. Clone the Repository
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
-cd <YOUR_PROJECT_FOLDER_NAME>
+git clone https://github.com/mouaad-dd/pathopredict-analytics
+cd pathopredict-analytics
+
 ```
